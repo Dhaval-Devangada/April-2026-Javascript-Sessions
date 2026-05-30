@@ -1,0 +1,13 @@
+{
+  "name": "april-2026-javascript-sessions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Dhaval Devangada",
+  "license": "ISC",
+  "description": "This is used to create my JS coding practice",
+  "type": "module"
+}

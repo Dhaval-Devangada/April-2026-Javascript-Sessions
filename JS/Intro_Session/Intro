@@ -1,0 +1,328 @@
+Drawback which were there in cypress/webDriverIo/Selenium,Playwright has resolved those drawbacks
+Playwright is always on top compare to selenium.
+Playwright is very well integrated with AI
+Almost all the tools available in the market those/which are supporting the browser automation they are using Playwright in the backened/in the core.
+So that they can interact with the browser though LLM and AI's as well
+70/80 % things in automation interview is about automation desing, framework development,Playwrightcore features,automation core features
+
+Why Playwright and Playwright with JS and TS?
+- Playwright JS/TS is dedaly combination in the market
+- Playwright core features are written in the typescript 
+- For Playwright TS is most compitable 
+- They always release new features with typescript and javascript early
+- While java/python/c# always running behind, always legging behind with compare to javascript and TS with the Playwright
+- Without Javascript and TS you can not write single line of code in the playwright 
+- So that is why we will see both JS and TS during training.
+- So we need to leatn Javascript or Typescript?
+- You can not directly jump to Typescript.
+- Typescript is wrapper on top of javascript.So javascript fundamentals are very very important.
+- Typescript is all about 90% javascript + 10% extra features
+- So if you try to learn typescript without learning Javascript then you won't be able to learn it properly.
+- That is why javascript is mendetory to learn
+- With the Playwright we will use the TS
+- JS is development for the UI development and server side programming 
+- For playwright we just need to learn core features of the Javascript which are going to be used in the playwright
+
+- We will install visual studio code 
+- How to install Javascript?
+- What do you mean by Javascript?
+- How exactly javascript works?
+- What is java basic core engine?
+- What is design architecture of the Javascript
+- How exactly code is getting compiled,executed?
+
+- Javascript is very simple language but in the begining it looks very wierd 
+- If your fundamentals is not clear then it's very weird that you won't know that what is happning here 
+- there are no special rules are definded in javascript
+- So people will get confused that should we go with the rule or without rules?
+- Javascript is super dynanic and flexiable thats why javascript is called scripting language
+- this is not low level language
+- Complete playwright code is based on the callback, Promises , Async/Await Programming 
+- If you don't understand the above concepts then it's very difficult to understand first line of code in the playwright also
+- We will learn with the diagrams and animation
+- We will talk about memory management 
+- What do you mean by garbage collector?
+- What do you mean by allocation of the object?
+- What do you mean by stack memory allocation?
+
+Once the javascript part is covered then we will start with typescript part for the automation engineer.
+Typescript is also very vast 
+Most of the development is happning with respect to typescript
+
+What is the basic difference between javascript and typescript? 
+or typescript is a run time language or a compiler language?
+
+This is the major advantage with typescript that,
+Typescript looks like JAVA or any compile time language that means the moment you write the code and if you are doing some mistake then typescript will tell you immedeately. that there is a problem in your code or syntax.
+Just like java 
+In javascript it won't give you error but in typescript it will give you error
+Javascript will give you a lot of surprices at the run time 
+We will write 100 lines of code and then when we run at that time javascript will tell you that semicolon is missing/other errors/function parameter is missing 
+So its frusteting that we are getting the errors after running the program 
+So that is why typescript is compile time language.
+Compile time language means - when i write the code, when i design the code , i am writing my code in VS code at that time I should be able to get that what is the problem that why our code is not working and will not work at the run time.
+Typescript is a compile time language so that the strongest reason that people are prefering typescript
+
+How exactly we learn any automation tool?
+- Understand the programming 
+- Core features of that particuler tool (Playwright)
+- It's not like that direct jumping on to the tool and designing the framework
+- We need to understand Wait concept, locator concept , n number of core features of playwright 
+- Then framework
+- Then Devops
+
+---
+*Below topics we will cover properly with the playwrigh
+
+- We will understand how playwright is interacting with the browser 
+- Like in selenium we have W3c webDriver protocol , here also we have some kind of RPC protocol,webSocket protocol and how exactly those protocl working with the browser.
+- How many browser is supported by the playwright, its totally different from the selenium
+- It's like competely reverse tool 
+- First interview question in playwright interview could be 
+- What do you mean by playwright architecture? How exactly it is working?
+- What do you mean by RPC calls?
+- What do you mean by webSocket architecture in the playwright?
+- Some amazing featurs we will cover as well 
+
+---
+*How playwrigh is different from selenium, let's take one scenario?
+- Browser context
+- We have one application with 4 different users 
+- One - Admin, second - Normal user , Third - Vendor , Fourth - Distributer 
+- So 4 different roles are available in our application
+- all are using "amazing.com/abc.com"
+- Can we perform tesing for all the user on sigle browser?
+- Like Admin is doing "Login",Normal user is also doing login at the same time , and other two user also doing login at the same time
+- All the 4 user are logging in at the same time 
+- That is not possible with the selenium and with other automation tools.
+- This is possible with the playwright because of the "Browser Context"
+- For example in browser we are opening Linkdedn and then if in the same browser, in new tab , if we open Linkdedn
+then browser will open Linkdedn with the same user name. If we want to open Linkdedn of 4 different user in the same browser then we can not do it.
+- Because Browser maintain the same sessions.
+- This is a limitation and special feature provided by browser.
+- But if we want to login with multiple user then we have two choices
+	1. Do login in incognito tab
+	2. Do login using another browser / browsers
+- We want to use single browser with multiple user, without exchanging/sharing the sesions 
+- So in Playwright we can do multirole testing 
+- So here we will undertand browser context, page context, multiple tabs and windows management
+
+----
+*Elements/Locators difference or overview 
+How many locators are there in selenium - 8 
+Things are different here in playwright
+Playwright hates xpath and css. Those are supported but not recommanded at all
+Those who all are coming from selenium background knows/understands xpath and css
+Playwright concept is different, playwright says we believe in accessibility
+We believe in whatever is visible to the user, we don't believe in DOM and ID name or etc..
+We believe in whatever is visible to the user on the page
+Playwright is highly supporting the accessibility or role based locators
+Playwright believes on whatever visible on the page and this is what actual user testing
+Have you seen that user is clicking on the button/entering the text based on the By.id or By.name written on the DOM
+Normal user don't bother about it.
+Playwright locators are completely different as compare to selenium
+There are around 15-20 locators in the playwright. So upto that level these guys have created the locator strategy
+Here locator strategy is the main core of your framework
+in 90% of the cases we will user the locators from whats visible on the page 
+And if that's not available then we will go for the xpath and other 
+xpath is the least priority 
+Playwright first prefer whats visible on screen then CSS then xptah
+99% of the time we will be issues will be solved with playwright locators
+accessibility first approach is used by playwright
+
+---
+* Element identification 
+In playwright we don't call the Webelement, we call the locators
+Can we write the xpath/locators in dom the way we write in the selenium? or can we validate the playwright locators in the DOM?- NO we can not 
+- Because playwright locators are specially designed and "Elements/Locators" which we are vlaidating in "Elements" section are
+Provided by the dev tools of the chrome browser/specific browser 
+- We can not write or validate the playwright based locators in the dev tool of specific browser
+- To write or validate playwright based locators we need to use special technique.
+- We will use some special technique like codeGen extension or something so that we can write and validate playwright based locators
+
+---
+* WebTable will be handled by one single command while in selenium we needed to write long xpath 
+- So here in playwright, while creating the framework. we won't be focisung on the writing the xpath. We will focus on developing the logic for automating the application
+- Othewise we will always be busy in the locators only 
+- So playwrigh say don't take tension about locators we have best strategy for the locators, so chances are very less that you will get fleky testcases[Today is working tomorrow it's not working]
+- Playwright says you focus on your business logic/ testcase logic / functionality logic of your framework. Don't worry about locators and fleky testcases
+
+*Playwright waits
+- Playwright is having autowait feature. Thats one of the best thing
+- Although it't not 100% true. There are other "static and dynamic" wait also
+- Every automation tool having it's own wait concepts
+- Playwright says you don't need to use any fluent wait or webDriver wait or any implicit wait or explict wait.
+- All above things are not needed
+
+* how exactly playwright works or what is the phylosophy of playwright?
+- Playwright guys says hey, there is a button on the page and i really want to click on that particular button 
+- So how exactly playwright will work in above case 
+- Playwright will check that button is not only visible on the page but it is stable also
+- First we will see that element is available on the page / visible on the page 
+- After that it will check that height and width is also properlly visible 
+- Then it is checking that, is it really enable or not so that i can click on it?
+- Then it will check that it is not getting overlapped by some other element
+- Then there are some other external checks it will do like below
+- is it getting blocked by some animation? or is there animation on the page or on button/on specific locator?
+- It will check that, those animation are very stable or not?
+- Once all above checks are done then only, playwright will say that "Button/specific" element is ready for the click
+- Then playwright will click on it.
+- So this is how playwright will check for the each and every element
+- This is how playwright automaticaly checks internally 
+- In selenium what happens that if there is any dealy for the given element then selenium will throw an error immedeately[like timeOut exception/element not found/no such element exception/stale element exception]
+- Here everything is checked by playwright internally and will wait for the element to be displayed,to be stable & to be enabled then after that playwright will start intracting with the element.
+- Those n number of steps which we write in other tools to interact with the element , those steps will be eleminated in the playwright
+- Most of the time it will do autoscrolling as well
+- Also for scrolling they have given the features
+- If scroling is not working then you can write single command for the scrolling 
+- No need to write complex classes 
+- Playwright internally checks many things dosen't mean its very slow. It is very fast because of the architecture of the playwright
+- Playwright is webSocket protocol and webSocket is superfast.
+- webSocket is super fast compare to https bases protocol
+- selenium is http protocol
+
+--
+* we will learn abot 
+-pop-ups
+- mouse actions
+- drag and drop
+- scrolling 
+- viewport manipulation
+- browser context 
+- authentication 
+- complex UI scenaris/ fames / svg element/ shadow dom/tables/pagination/ajax scenario/infinite scrolling/iframe/psudo elements/network intersecption/synchronazation
+- everthing handled here properly
+- It has it own internal method to switch to iframe. 
+- if element is under the shadow dom then playwright will automatically go then button and click on i.
+- It does not bother about shadow dom is there or not.
+- It will automatically check- hey there is a shdow dom - then it will do the auto pearcing  
+- We have concept of auto pearcing in shadow dom
+- In selenium its very diffucult to click/perform any operation on element which is inside/uder the shadow dom
+- salesfoce like application is full of shadow doms so it's difficult. 
+- Playwright run the typescript directly 
+- But when we write the normal typescript code then first we have to compile it. Because its a compiler language.
+- Compile it then we have to run it
+- first session is all about how exactly typescript and javascript works
+- Not all the features are better than selenium 
+- We will see why selenium is better somewere as compared to playwright
+- playwright is leading interms of feature wise but there are few things 
+- For example you are using selenium in your project from last 10 years, then its very difficult to migrate from selenium to playwright
+- There are project where in 2000 testcases written in selenium and if everything working fine then why someone will migrate from selenium to playwright
+- It takes 3-4 months to migrate
+- So selenium is not outdated 
+- For new application peoplw prefer playwright
+- Or if your previous automation is not upto the mark very fleky, No one is designing properly and no one is maintaing properly
+- Then in that case people are migrating from selenium to playwright 
+- Or if your application is having complex shadow dom, iframes then people are moving from selenium/other automation tool to playwright
+- If things are stable with selenium then we don't need to migrate from selenium to playwright
+- Playwright is opensource 
+- Selenium is the best tool for the cross browser because selenium interecets with the real browser.
+- Selenium says whatever the browser you are having in your system, we create the replica of those browser then start interacting with that
+- In playwright [cross-browser tesing] is a glitch 
+
+*In playwright there are 3 major concepts 
+Chrome
+Firefox
+Webkit
+
+- Playwright does not use the original FF
+- Playwright uses its own "Firefox-Patch-nightly build"
+- Means Playwright team has created his own firefox browser version 
+- They are not using the original browser
+- They are running the testcases on "Firefox-Patch-nightly build" which they have created
+
+- Same way as "Firefox" we have WEBKIT - for the SAFARI browser/safari patch. So we are not using original safari browser
+- This we can use with our original browser.Chrome is coming from Chromium technology, we have Chromium - for CHROME,EDGE,BRAVE,OPERA
+- We have patch for FF and SAFARI to run testcases but for all other we can use our original browser to run testcases
+- But they claim also that if you run the testcases on FF and SAFARI using patch then the result is equilante to original browser
+- PAtch means custom version of FF and SAFAR. We can not trust PATCH for production application
+- May be in feature they will start interacting with original browser which we have in our system
+- So for crossbrowser people prefer selenium due to above limitation/drawback.That limitation is not there in selenium.
+
+*So playwright is only for WebApplication tool only? / What kindof testing we can perform using Playwright?
+- We can perform Web automation
+- We can perform API automation as well
+- No desktop and no mobile automation
+- In selenium we can do only webAutomation
+- We can simulate the mobile view in Playwright, like we can create the viewport and do the automation
+- But its not actual mobile automation just like appium does
+- No direct db testing there, we need to use javascript/typescript libraries to interact with the database
+
+* once all the core features are done then we will cover advanced features
+- like framework development 
+- Fixteatures 
+- Here good thing is that not need to use TestNG, Junit[These are testing framework or testrunners are available]
+- Playwright says use playwright and we will give our own test runner
+- With test runner you do whatever you want to do
+- You want to acheive 1. Data driven approach 2.Data provider 3.parallel execution 4.Running a testcases in specific sequances
+- Everything will be takencare by test runner, which is inbuit test runner provided by playwright
+- Assertation will be the provided by playwright as well.
+- So can we say playwright is a "test automation tool" or is it only "automation tool"?
+- Selenium is "Web Automation" tools - No assertation nothing - using selenium we can not validate anything
+- In selenium we have to write the assertation using testNg. Selenium will not tell you that something is correct or wrong
+- But playwright will tell you
+- Playwright says you will get "All core playwright features" + testrunner + assertation= Testcase -> so you can write your testcases using playwright
+- With playwright we have inbuilt reports as well
+- So that is why playwright is called test automation tool and selenium is called the webAutomation tool.
+- WebAutomation means , automation of the application without testing
+- With selenium we need to use other external tools like testNG , Junit,Pytest
+- With playwright everthing is inbuilt - testAutomation tool PW + test runner + assertations => testcases + reports[PW reports,HTML,JSON,Allure]+ everything is inbuilt with paralled testing also + Automatic screenshot + Automatic video + Tracing (logs)
+- With other automation tools it is veru difficult to maintain/create parallel testing [Thread group,multithreading]
+
+-----
+* Framework development
+- One of the best framework 
+
+----
+cucumber [2 session]
+---
+devops
+----
+npm eco system 
+design the framework and distribute it 
+how to build the project and how to deploy the projects to npm packages
+kind of maven repo
+----
+Dockerized testing 
+----
+cloud integration
+---
+API testing
+---
+We can combine WEB + API in one framework
+---
+AI [Once we learn then we will use AI]
+We need to control the AI
+We can not beat people who really good in designing the framework and using the AI
+Fundamentally you need to improve a lot then start using the AI
+
+---
+Intersting 
+AI
+LLM
+MCP
+Playwright with AI agents
+Create your MCP server and Agent
+We will create 3/4 tools
+We can create our own MCP and Playwright MCP as well
+MCP is a kind of server or protocol to interact with clude/chatGPT/geminie systematically 
+AI agents is like junior engineer which will use the MCP tool and to interact with the claude and will give result
+---
+When you are coming from diff background like java and if you are struggling in javascript then there is only one soluation - learn about basics 
+You are struggling with playwright because you are not comfertable with javascript and typescript
+--
+For salceforce batter to use playwright
+Playwright inbuilt future are written in ts so its batter to use playwright with ts rather then any other language
+self healing is not there in playwright 
+it's external library[helium] we need to use it -> accuracy is not that great 
+Playwright is promising and BATTER THAN Selenium in may aspect
+All the AI toos AI in the backed
+There is no full fladge or dedicated company for selenium but microsoft is responsible for playwright. They have full fladge dedicated team 
+In selenium we don't have AI support. Selenium have very few releases while playwright is very aggrisive and do releases every 15 -20 days
+How to jutify to use Playwright instead of JAVA?
+- Do POC on both the tools 
+- Write 10/20 testcases with JAVA and Playwright
+- And tell the advantages of Playwright
+- Do the states and do the differences 
+- Present basic POC to them
+- We don't need to do much setup, amazing reports , speed , performance, not just good for the projects but good for personal growth as well

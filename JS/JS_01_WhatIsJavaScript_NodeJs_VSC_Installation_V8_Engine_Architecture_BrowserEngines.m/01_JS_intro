@@ -1,0 +1,288 @@
+Basic installation 
+Architecture of the javascript
+So that it will be clear in your mind that how exactly things are working internally
+So it will be helpfull in write the code and optimize the code.
+------
+Into of javascript?
+------
+Browser understand only one language which is JS
+We are designing WebApplication
+HTML -> what do you want on your website? / number of elements coming on page is due to html 
+CSS -> How do you want it to look?
+JS -> What do you want it to do?[I want to perform click, enter value,refresh,...etc]
+Functionality of the element that you define with the help of js
+When we want to pefrom some ACTIONS then we need JS. [Bank app, IPL, finTech app]
+For simple hotel application where in we just have few photos or something we don't need much JS
+Frame work avail for web development -> angular, vu.Js, react 
+So we are not going to develop the application. So what is important for us
+We are going to make framework 
+Writing the test automation code , writing the playwright code, writing the basic logic, creating varibales,loops, writing logic so that we can execute our scenarios and everything.
+So for that purpose javascript knowladge is required for us 
+
+---
+How exactly browser understand javascript?
+---
+Browser uses engines
+These are called javascript engine
+Thers is one very popular engine provided by google 
+Google created this engine which is V8 engine
+This V8 engine used by most of browsers available in the market
+So what exactly V8 engine is doing 
+We can say V8 engine is kind of high performance engine which is actually compiling and executing your javascript code on the browser 
+So what happnes when you download the CHROME or any browser then this V8 engine runs in our browser
+And when we open any application "amazon.com" then what happnes when we open the dev tools
+DOM is getting loaded and updated when we perform any application
+V8 will perform n number of things on out application/browser
+V8 engine is running on your browser and it will read the DOM and it will check that these are the HTML elements and DOM elements are available in the DOM
+V8 engine will load the entire DOM and it will start displaying elements on the page
+Everything is happning via V8
+So what our side we are doing as a developer
+We are writing the code in javascript
+then running it on a browser
+browser says i understand only and only javascript
+browser says whatever javascript you have written i am going to execute it with the help of V8 engine
+And this V8 engine is written with the NodeJS
+NodeJS is complete library just like we have JDK for writing the java program
+Same way for javascript or typescript we use NodeJS library
+but sometimes we write the code in python/js/java/c#/go, then how exactly browser is executing this kind of code?
+We developed application with the help of python -> so can browser understand python -> No -> browser understand only javascript
+So in above case our entire python/js/java/c#/go will be converted into javascript -> because browser understand only javascript -> and because of that we are getting output on the page
+So remember this basic funda that, every browser has one javascript engine
+Google is providing V8 engine and it's open source
+If i want to launch my own browser "DDBrowser" then i can use V8 engine and i can create my browser
+Mozilla is the first broswer who relesed the engine in the market which is known as "SpiderMonkey"/Gecko
+For application safari we use the engine which is known as "WebKit"/JavaScriptCore/Nitro
+Microsoft -> Chakra which was very slow so microsoft switch to V8
+internet explorer -> Chakra which was very slow
+IN automation we are writing the code in JAVA/Python etc. + we write code to perform action -> broswer will open [Whatever code we have written those action will be performed]
+Automation guys are giving flexibility to us to write code in any language 
+But ultimately browser will understand only javascript
+So what exaclty they have created, they have created all the mapping 
+Suppose we have written click with java > later on it will be convert to click with javascript
+So ultimalely mapping is done by playwright or selenium guys -> so then on the browser action will be performed by javascript
+there is no other way browser can not understand any other language
+Then why we are writing code in python/java/c#/go\. What is the reason behind that?
+The reason behind is that give the flexibility to programer + every programming languages have their pros and cons
+So on the basis of the flexibility of the programer, we are writing the code in out own prefered language > but when we execute something on the browser> everything is mapped with javascript > then it will be run with javascript
+So this is the reason that webAutomation is moving towards javascript and typescript
+Plawright, Cypress, WDIO they follow the same thing.
+Browser understand javascript-We are writing automation code in javascript -> then we are running on browser(browser understand javascript). So we have batter compatibility here.
+So which has batter compatibility, writing code with JAVA or javascript?
+small things matter sometimes. If developer is writing code in javascript and if we don't have any automation engineer then out developer can contribute to automation as they know js
+But if developer are of python then they can not contribute
+This is the reason why playwright is becoming popular
+selenium guys have not created much compatibility with javascript. Thats why WDIO came into the picture, special version of Javascript with selenium
+We used to inject javascript in selenium as well. JAVA>JSexecuter>Browser(js)
+But modern automation tool cyprss, playwright,WDIO > first they always release with the javascript only > because broswer understand only java> so we don't need to do much mapping here > the compatibility/intigration willbe very smooth
+Whatever we are writing [Natural language/codeless/BDD/AI] > everything is going to browser >everything mapped with javascript > then only will be running 
+
+most of the mordern browser > they all are using standard > so which is standard in the market > V8 engine
+
+Quesstion here is > engine is for the bowsers
+and I am not a web developer, i want to write my code, i really want to practice in my laptop/ in my system/machine 
+I really want to run javascript code in my machine > then how should i do that?
+We understand that browser is having engines > they understand the javascript thats why i am able to perform anything on my browser
+So if we want to do similar kind of thing[which we are doing on browser] in my system/machine
+like
+JS code 
+let a = 10;
+let b = 20;
+prit a + b; // output should be 30
+
+So who will execute above code? > Think about it > there is no browser 
+Lets assume we are writing above js code in VS Code/ or in any editor 
+Who will execute above code?
+So for that purpose/to execute above code > we should have NodeJS / we need to download the NodeJS
+it't not like that like some magic will happen and code will be executed
+We need to download the NodeJS library 
+And inside NodeJS we are having V8 engine
+So thats why when we work with WDIO,Cypress or playwright, the first thing we heard is download NodeJS
+When we download the NodeJS then V8 engine is automatically coming 
+So broswer is having it's own V8 engine and when we download the NodeJS then also we are having V8 engine
+And This V8 will help us to execute the particuler code
+To run any code what we need? > we need environment 
+To run java code we need environment as well > which is JAVA RUNTIME ENVIRONMENT/JAVA DEVELOPMENT KIT 
+Same way for Javascript based code and typescript based code we need NodeJS 
+In the case of typescript > typescript will be code will be compile into javascript > then javascript code will be given to broswer > because broswer understand only and only javascript
+They took V8 engine term from the car engine
+Browser V8 engine and NodeJS V8 engine, both are same
+---------------------------------------------------------------
+We understood V8 engine. But How exaclty V8 engine is working?How exaclty it is running
+our javascript code?
+---------------------------------------------------------------
+We write the Javascript code
+Javascript code is getting parsed
+So the V8 engine we have download with the help of NodeJS
+That V8 engine/NodeJS is having one component "Parser"
+So javascript code will be parsed 
+It will check what? > It will check multiple things like below
+Basic syntax
+No spelling mistake 
+White spaces are avilable or not
+extra lines
+comments
+
+It will remove unnecessary things from your code 
+Will remove extra space, and comments
+
+Now after that it will be converted to AST
+AST is a systmatic structure
+It will create tree structure of your code 
+
+Suppose you have written 100 lines of code initially
+in parsing it will check spelling wise its correct or not, white spaces , extra lines and comments will be removed by parser
+After parsig we have around 70 lines of code 
+These 70 lines will be converted to AST
+
+What is AST and How exactly AST will work?
+AST > Abstract syntax tree
+> Systematic tree will be created 
+> These are number of varibales your code is having/using it 
+> These are number of functions your code is having/using it
+> These are number of class your code is having/using it
+> These are number of objects your code is having/using it
+>In tree structure - code will be divided and based on the varibales,functions,class and objects
+> Everything[varibales,functions,class and objects] will be segrigated in a particuler tree structure
+
+Once the tree structure is available then it will be given to interpreter
+
+------------------
+What is interpreter? To understand that we need couple of more things
+---------------
+So what happnes that, when we write the js code 
+Javascript is a compiler language or runtime language? - Run time language - Run time language means - Dynamic language - Which will give me output at the run time.
+Runtime language - That means whatever js code you are writing, everything will be executed at the run time.
+It means when i run my code then only output is visible to me.It means when i design the code i will never get a hint that what mistake you are doing.Because no one there to check my code in javascript 
+compiler language - The moment i write the code, i will start getting the errors - compile time errors
+
+So once the AST is complete then it will be given to where 
+We run the code 
+So when we run the code then interpreter will come into the picture at the runtime
+What is interpreter?
+interpreter work is to convert your javascript code into "bytecode"
+And from the "bytecode" we are getting the output
+Any programming works on below fundamental
+src code (JS) > will be converted into "byte code" [run time]> bytecode will be converted to "machine code"[binary code] > then we are getting the output [there is no compiler available here]
+.java > .class[compiler] > byte code > machine code > output [java is both compile time + run time language]
+c > compiler > machine code -> output
+So out of above three which one is faster? 
+[C language so that is why used for robotics]
+[java is used for entrprice application, for server side application, where we need to design lot of object oriented things]
+[javascript says i really want very lightweight/dynamic programming language, just like for browser execution and small small things ans for small application, i don't wan to design complex application then we will go with javascript ]
+> c language is very fast because there is no bytecode, whatever source code we have written > immediately converted to machine code and then get the output > so the processing is very fast to get the output
+> javascript is faster then java because javascript iks not wasting time in compiler > everything is happning at run time 
+
+"bytecode" is an intermediate code which we can not read 
+machine understand only 0101010
+
+so ultimately we are geeting the output through the machine and on our machine 
+
+so src code will be converted to bytecode with the help of interpreter
+then interpreter will create the machine code 
+Macine code will be given to processor>will be given to CPU> CPU understand 0101010[complete Assembly code]> then we will get the output
+
+
+Src > AST
+astexplorer.net
+AST tell us below things
+That in your javascript code
+What are the variables are available
+what are the expressions are available
+what are the function declaration available 
+Just for 2 lines of code big AST structure is getting generated automatically 
+
+Tomorrow if we write 100 lines of code then also it will be converted into AST
+Segratation of your code systematically
+once the tree structure is available then we are going to run it 
+
+There are two thing in any programing language.
+1. Hot code [A code which is getting executed repetitively][Like calling the function inside the for loop - infinite time,1000 times, function is getting executed n number of times in the for loop, so we need/required more processing to do that, that is called the Hot/warm code][This particuler code executed repetitively]
+2. Cold code  [We don't need to do much processing] [Simple variable,basic loop, sum program -  then simply run it - that's it]
+
+Everything[From SRC writing to OUTPUT] is happning within the v8 engine
+V8 says you give us the AST tree that you have created now  we will decide 
+> what/which is hot code and what/which is normal/cold code 
+V8 will automatically recognize whether code is hot/cold
+
+If code is a cold code then > simply interpret your code > convert it to machine code >machine code >output
+But if there is a hot code [execution is happning again and again/reading a big file/] > then V8 engine says that "compilations" process comes into the picture > compilation is called "optimization processs"/ "profiling process"
+So they will improve the pro-activitiy here
+So now/thats why JIT comes into the picture [JIT - just in time]
+
+in every programing language there is concept called JIT
+JIT will be activated whenever we see > hey there is a hot code 
+In java just in time is available 
+[JIT] will improve your bytecode
+[JIT] will introduce some catalyst 
+[JIT] will improve your pro-activity
+[JIT] will improve the performance of your execution 
+
+JIT is a kind of compiler.
+JIT will be activated when there is a hot/warm code 
+If it is a hot/warm code  then JIT will come into the picture and will optimize your code 
+And if your categorize your hot code into two particuler
+1. less hot [warm code] 
+2. very hot
+
+1. less hot code needs less optimization[store] > converting code to machine code > machine code > output
+2. Very hot code then > we will do the proper optimization [optimization] > converting code to machine code > machine code > output
+
+They use few terms in javascript here
+So whenever there is a hot code > just try to understand like a normal car, when we drive the car in the peak summer season (40 degree outside) and we are going for a trip 
+> after 100,200 km engine will get hot/hit up > so we need to fill some cold water
+> exactly we need to do over here fill some cold water/ we need to start the turbo engine. To cool down the system
+> similar kind of terms used in javascript also  - which is - turbo fan - to cool down the system - then do "optimization" > converting code to machine code > machine code > output
+> If there is a lot of hot code/warm code then "turbo fan" will start
+
+How exaclty these things are working internally with respect to javascript?
+
+src [js]->bytecode[run time]->hot/warm/cold>machine code > o/p
+no one can decide what is hot/warm/cold
+
+how exactly bytecode will look like? can we read it - no
+To check byte code command is -> node --print-bytecode filename.js
+For two lins of code it will give us lengthy bytecode. 
+bytecode is not human readable at all
+Based on byte code V8 will decide that, given code is hot/warm/cold
+
+
+Now i really want to check that turbo fan really started or not? its really cold or hot code? ik really want to see that. how will you do this?
+command-> node --trace-opt demo.js
+We will get the output
+And we will get the tracing of what happned at the interpreter level
+It says > we are giving your code for "optimization" to "TurboFan". [Reason is what: hot and stable]
+Once the optimization is done then, it will cool down the system
+And we will get the output
+V8 engine will start the turbo fan to cool down the system
+Its not about the complixity - that if logic is complex then turbo fan will start
+Its about repetitive code / repetation of the code 
+Its about how many iteration you are performing / how much time it is taking 
+
+bytecode is an intermediate code. it will be stored in the memory once the execution is done then it will be deleted.It will never be stored inside the leptop.
+
+To process the machine code > Do we need normal CPU machine or good Machine/CPU?
+We need good CPU so that execution/process can happen fast.
+If we don't have good machine then it will start processing little slow.
+Thats why we always say that take the latest laptop. It[Performance] is not upto the programming language. Programming language is just converting source code to machine code
+Now it's up to the machine now that how much time it will take to give you the output
+
+Whenever we want to see the hot or cold code/internal optimization/ turbofan really started or not then we need to use below commnad
+node --trace-opt filename.js
+if we write below command then it[above command] will run silentely 
+node filename.js  
+
+We can not see thr machine code
+
+Why we are trying to understand the internal structure?
+Because without understanding of the background, we won't be able to get that confidance while writing the code.
+
+We should get the feedvback related to code when we write the code. Just like we get in java
+If you remember we always get javascript related logs in inspect section/in console section
+So that is why we share the console logs to developer 
+What developer does is > they design the code > run it from their side > then deploy the code > then browser also running the same javascript code > then broswer is also giving the errors in the console 
+So to fix those errors what we do > we fix the code > we should know all the best practices > we have to memomrise everything 
+> this is not about memorizatioin > it about writing the good code from the starting 
+> so we get the good feedback from the starting then we can write good code 
+> so that is why we use the typescript
+> that is why typescript comes into the picture. it a wrapper on top of javascript
+>typescript says if you really want to write typescript code > fine you can write it > I will give you feedback when we design the code 
