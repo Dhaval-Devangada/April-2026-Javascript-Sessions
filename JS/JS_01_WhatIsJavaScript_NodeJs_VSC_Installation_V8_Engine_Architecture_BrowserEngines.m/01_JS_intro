@@ -73,8 +73,8 @@ But if developer are of python then they can not contribute
 This is the reason why playwright is becoming popular
 selenium guys have not created much compatibility with javascript. Thats why WDIO came into the picture, special version of Javascript with selenium
 We used to inject javascript in selenium as well. JAVA>JSexecuter>Browser(js)
-But modern automation tool cyprss, playwright,WDIO > first they always release with the javascript only > because broswer understand only java> so we don't need to do much mapping here > the compatibility/intigration willbe very smooth
-Whatever we are writing [Natural language/codeless/BDD/AI] > everything is going to browser >everything mapped with javascript > then only will be running 
+But modern automation tool cyprss, playwright,WDIO > first they always release with the javascript only > because broswer understand only javascript> so we don't need to do much mapping here > the compatibility/intigration will be very smooth
+Whatever we are writing [Natural language/codeless/BDD/AI] > everything is going to browser >everything mapped with javascript > then only will it be running 
 
 most of the mordern browser > they all are using standard > so which is standard in the market > V8 engine
 
@@ -170,7 +170,7 @@ So out of above three which one is faster?
 [java is used for entrprice application, for server side application, where we need to design lot of object oriented things]
 [javascript says i really want very lightweight/dynamic programming language, just like for browser execution and small small things ans for small application, i don't wan to design complex application then we will go with javascript ]
 > c language is very fast because there is no bytecode, whatever source code we have written > immediately converted to machine code and then get the output > so the processing is very fast to get the output
-> javascript is faster then java because javascript iks not wasting time in compiler > everything is happning at run time 
+> javascript is faster then java because javascript its not wasting time in compiler > everything is happning at run time 
 
 "bytecode" is an intermediate code which we can not read 
 machine understand only 0101010
@@ -246,7 +246,7 @@ bytecode is not human readable at all
 Based on byte code V8 will decide that, given code is hot/warm/cold
 
 
-Now i really want to check that turbo fan really started or not? its really cold or hot code? ik really want to see that. how will you do this?
+Now i really want to check that turbo fan really started or not? its really cold or hot code? i really want to see that. how will you do this?
 command-> node --trace-opt demo.js
 We will get the output
 And we will get the tracing of what happned at the interpreter level
