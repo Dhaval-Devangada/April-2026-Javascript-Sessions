@@ -23,12 +23,12 @@ addition("naveen","automation"); // this will concat the given string
  * So conclusion: javascript is a tuntime language > everything will be decided at runtime
  * 
  * Do we have any compiler in js?
- * Yes we have that > but at the design time or at the run time
+ * Yes we have that > but at the design time or at the run time?
  * We have compiler at the run time 
  * And the compiler name is what > JIT > just in time compiler 
  * But this compiler is different
  * What is the purpose of the compiler > purpose of the compiler is to optimize the code > to check that it is a hot code / warm code or cold code to start the optimization process
- * How wxactly they will start the optimization process.> By using some optimization techniques like turbofan
+ * How exactly they will start the optimization process.> By using some optimization techniques like turbofan
  * Ultimately everything will be converted to machine code and from machine code to the o/p
  * so that is the purpose of the JIT [just in time]
  * just in time means > whenever it's required they/it will come  > whenever there is a need of to improve the code / need of optimization JIT will come into the picture.
@@ -61,13 +61,13 @@ Parser is very straight forward thing that when we write the javascript code
 Parser will tell what 
 Parser is a part of javascript V8 engine 
 It reads the javascript raw code in your js file 
-It breaks the code into tokens menas > remove all the unnecessary lines and spaces, it analyses the gramer structure and syntax error
+It breaks the code into tokens means > remove all the unnecessary lines and spaces, it analyses the gramer structure and syntax error
 After that it will build the AST to represent the code
 AST is happning immedietely after the parser
-Monitor, compilation, converting into the machine code < thsi entire process is called interpretation. Refer the diagram from the notes 
+Monitor, compilation, converting into the machine code < this entire process is called interpretation. Refer the diagram from the notes 
 
 if instead if "let" we just write "lt" > then "red" line will be there under the "lt". 
-So that line is coming is due to the "Visual Studio Property" or "Parser Property" > It's a parser property
+So that line is coming is due to the "Visual Studio Property" or "Parser Property"? > It's a parser property
 In the VS code, node js is already running 
 node js will activate the parser and it will tell > hey there is a syntax error > not the visual studio property
 
@@ -77,7 +77,7 @@ NO - interpretation will start after the AST
 This is normal process -> write the source code > parse it > convert it to AST 
 
 Refer diagram
-Parsing > AST > Ignition will happen(Ignition means lets start running. Ignition means RUNTIME. Interpreter will come into the picture)> Byte code >Byte is hot ot cold > if hot "srart the turbo"> machine code > then code runs on the CPU
+Parsing > AST > Ignition will happen(Ignition means lets start running. Ignition means RUNTIME. Interpreter will come into the picture)> Byte code >Byte is hot ot cold > if hot "start the turbo"> machine code > then code runs on the CPU
 
 
 Install node.js (always download current - 2 versions)
@@ -104,7 +104,7 @@ Suppose you have written very bad program - compiler dosen't  bother about it > 
 They bother about the performance that they have to improve. That's it 
 Its developer the responsibility to write the right business logic code 
 
-ASR is not a tools. It's a structure
+AST is not a tools. It's a structure
 Output of the AST will become the input for the interpreter
 
 node js collabaration is with the V8 only not with the spider monkey and all (the engines which are develpoed by other browsers)
@@ -114,12 +114,12 @@ JIT is having certain rules and regulation internally to cool down the system
 JIT says if you have any code where in you running loop for 1 million time then Let me[JIT] add few batter teqniques to improve the performance 
 
 
-Other AI powsers IDE follow the same approach as we have discussed 
+Other AI Bowsers IDE follow the same approach as we have discussed 
 
 Windsurf, Cursor, and Replit are next-generation AI-powered development environments (IDEs) designed to make coding faster by using AI agents to write, debug, and manage code. 
 Windsurf and Cursor are VS Code forks focused on local project development with deep AI integration, while Replit is a cloud-based IDE designed for immediate "vibe coding," prototyping, and instant deployment
 Ultimately Windsurf, Cursor, and Replit all are editor, you have to write the code there and execute it >everyone is having node.js internally in their system
-Using our system nodeJS editore run the program
+Using our system nodeJS editor run the program
 
 What happnes when you do parallely execution? How V8 engine behaves?
 1 test is going to FF, 1 test is going to CHROEM , 1 test is going to WEBKIT 
@@ -142,9 +142,9 @@ Lexa tokenazation means divide your code into small small component and some mea
 lexar algoritham is written inside the parser
 
 Java and js both are good in their own ways 
-Java is used for enterprice level application, specially for the distributed syatem and for batter performance 
+Java is used for enterprice level application, specially for the distributed system and for batter performance 
 js is used for the browser based application, machine learning and AI
-huge syatem,multiple integration and micro services and all these > where server performance is very important then we go with JAVA anf GO language
+huge syatem,multiple integration and micro services and all these > where server performance is very important then we go with JAVA and GO language
 
 Which one is faster JAVA or JS?
 performance wise js is slightly faster because of the V8 engine 
@@ -287,3 +287,14 @@ npm is a **package manager + online registry** for JavaScript/Node.js projects.
 It stores and manages reusable code packages, tools, and project dependencies.
 
  */
+
+
+//uncommnet below and check
+//  function(){}
+
+/**
+ * why red line is appearing though we don't have compiler at design time in js?
+ * because of what red line is appearing below paranthesis? > PARSER
+ *
+ */
+
