@@ -4,7 +4,7 @@
  * > if we create any number/string then JS knows that how much memory I need to allocate here 
  * number[any kind of number postive,negative,0][Here we don't have int,byte, double - just simple number]
  * string[whatever we are writing in the single quote and double quote is string][any description,title is called string here]
- * boolean: true/fales
+ * boolean: true/false
  * BigInt
  * undefined
  * null
@@ -37,19 +37,19 @@
  * let/var/const was not available in the old js
  * so in the package.js, if you change the "type":"commonjs" then> error will not appear 
  */
- //x = 10;  //Error:  ReferenceError: x is not defined
- //console.log(x);
+//  x = 10;  //Error:  ReferenceError: x is not defined  //you will get error at run time since JS is runtime language
+//  console.log(x);
 
  //lets use indentifire, we will see the difference between identifier later, 
 // pepople say "let" is data type of x but no, let is a identifier/keyword of a variable
 //let is not defening anything that "x" will be number or anything
 
 
- let y = 20; // x is variable , = is assignemnt operator 10 is values assigned to X
+ let y = 20; // Y is variable , = is assignemnt operator 10 is values assigned to Y
  console.log(y);
 
  /**
-  * But we really want to know that what is the datatype of x
+  * But we really want to know that what is the datatype of x?
   * Datatype of "x" depends on what > depends on it's value > here 10 is a number or string > it's a number
   * To check what kind of data type > there is a method 
   */
@@ -57,7 +57,7 @@
  console.log(typeof y); // It will tell us what kind of value i am having in y
 
  //in js number means a number 
- //in js everything is considered as a number
+ //in js everything[negative/positive/0/decimal] is considered as a number
 
  console.log("--------------------");
  let z = 12.33;
@@ -67,7 +67,7 @@
 console.log("--------------------");
 let i = -100;
 console.log(i);
-console.log(typeof i);
+console.log(typeof i);//number
 
 
 /**
@@ -76,7 +76,7 @@ console.log(typeof i);
  * 
  * in js single character is also called a string here
  * there is no concept like special character concept
- * in js we can write string is ''[single quote also] and in ""[double quotes also], both are considered as string
+ * in js we can write string in ''[single quote also] and in ""[double quotes also], both are considered as string
  * There is no default value concept 
  */
 console.log("--------------------");
@@ -112,7 +112,7 @@ console.log(typeof test);
 
 console.log("--------------------");
 /**
- * If we write don't assign the value then what will be the output? > undefined
+ * If we don't assign the value then what will be the output? > undefined
  */
 
 let p; // we have not given any value and we don't know the type of "p" because type of "p" decided based on value and we have not given any value
@@ -132,7 +132,7 @@ console.log("--------------------");
  * size: 4 bytes , generally there is no fixed size to store boolean but according to document its 4 bytes
  * boolean can be used later on in the loops also or in condition checking also, in assertation as well
  * user is logged in or not - true or false
- * element is displayed or not - ture or false
+ * element is displayed or not - true or false
  * 
  */
 
@@ -152,7 +152,7 @@ console.log("--------------------");
  * 
  * we want to create variable but right now we don't know value of that variable 
  * when we are not sure, when we write the code 
- * when we are not sure about the value of the variable or may be later on we decide what will be the value then for the safer side we can say it's "undefined" right now 
+ * when we are not sure about the value of the variable or may be later on we decide what will be the value, then for the safer side we can say it's "undefined" right now 
  * that is the only purpose of the undfined 
  * when we are not sure what will be the value then we say undefined 
  * 
@@ -163,6 +163,7 @@ let lastname;  // if we don't write anything then it will give you undefine only
 // but if we are not sure then we can write "undefine" here
 // if we don't want to write anything then that also we can do it 
 console.log(firstname);
+console.log(lastname);
 console.log(typeof firstname);
 console.log(typeof lastname);
 
@@ -193,7 +194,7 @@ console.log("--------------------");
  * Re-initialization
  */
 let c  = 10; // 10 is number // it will take 8 bytes
-//Now i want to upate the value of c 
+//Now i want to update the value of c 
 //we can not update the value by doing below. It will give an error[uncomment below and run to check the error] and error is "SyntaxError: Identifier 'c' has already been declared"
 //let c = 20;
 //duplicate variables are not allowed. it means two times initilization not allowed for the "let" variables
@@ -208,10 +209,9 @@ console.log("--------------------");
 
 /**
  * var keyword
- * var is a legasy identifier in old js
+ * var is a legacy identifier in old js
  * var - old js way of declaring variables 
  */
-
 var i = 10;
 var i = 20;
 console.log(i);
@@ -223,7 +223,7 @@ console.log(i);
 //Once the variable is declare we should not declare the same variable again 
 //what is someOne change the 'Playwright/Selenium' with the 2000 then all the calculation will be done based on 2000 which is not a tool
 //and apart from above there will 2 memory block will be created one for 'Playwright' and one for 'Selenium'
-//and if we print the latest then "Selenium" will be printed, so don't ypou think that "Playwright" is still there ans wasting our memory by taking extra space in the memory
+//and if we print the latest then "Selenium" will be printed, so don't you think that "Playwright" is still there and wasting our memory by taking extra space in the memory
 // if we write 100s of "toolName" and assigning value then we are doing poor memory management because here value will not be overide instead new memory block will be created
 //there is nothing like garbage collector 
 //below is not Re-initialization, its a re-declaration
@@ -250,15 +250,15 @@ const tarinerName= 'Naveen';
 tarinerName = 'Dhaval';
 console.log(tarinerName);
 
-//All the universal truth, utl , title value, username, pi value - we always create with the const 
+//All the universal truth, url , title value, username, pi value - we always create with the const 
 //if we use let , var > then we can change it 
-// If we want no one to change it - then declare const
+//If we want no one to change it - then declare const
 
 
 //what will be the output of below? > error : SyntaxError: Missing initializer in const declaration [means you have not initilize anything]
 //because below is const and const should always have value  
 //we need value for the constant, without const value you can not declare const variable
-const title ; // you have declared a title and there should be a constant fixed value 
+const title; // you have declared a title and there should be a constant fixed value 
 console.log(title);
 
 
@@ -267,12 +267,12 @@ console.log(title);
  * Difference between var,let and const
  */
 //const: 
-// re-declaration is not allowed 
+// re-declaration/initilazation is not allowed 
 // re-assignment is not allowed [updation/replace is not allowed]
 
 //let:
-// re-declaration is not allowed [let u =10; let u =20;]
-// re-assignment is allowed [updation/replace is  allowed]
+// re-declaration/initilazation is not allowed [let u =10; let u =20;]
+// re-assignment is allowed [updation/replace is allowed]
 
 //var: not a good practice to use 
 // re-declaration is allowed 
@@ -299,7 +299,8 @@ console.log(top);
 
 var bottom = 45;
 let bottom = 89; 
-//java script will follow same rule at run time that "let" is already created and then again vat is alreday there. so it is not allowed
+console.log(bottom);
+//java script will follow same rule at run time that "let" is already created and then again var is alreday there. so it is not allowed
 
 
 /**
@@ -314,7 +315,317 @@ let bottom = 89;
 
  if we keep writing npm init -y then it will keep overriding 
  java is always faster than python
- variables [x, firstname] will be stored in the auculiry memory/spce or loader space > entire project/file will be uploaded there and from those file everything will be read
+ variables [x, firstname] will be stored in the auxiliry memory/spce or loader space > entire project/file will be uploaded there and from those file everything will be read
  byts and bits will be taken on the ram
- variables and all will be stored in rom space [hardisk/auxularity space]
+ variables and all will be stored in rom space [hard-disk/auxularity space]
  */
+//above flow is confusing so refer below for clarity 
+ /**
+  * Program execution flow
+  * 
+  * 
+  * There are a few concepts mixed together here. The main correction is: **variables are not stored in ROM/hard disk during normal program execution.**
+
+### Think of it as 3 stages
+
+```text
+Hard Disk / SSD
+      ↓
+Program / JS file is stored here
+      ↓
+     RAM
+      ↓
+JavaScript engine loads and executes the program
+      ↓
+Variables / objects / runtime data are stored in RAM
+```
+
+### 1. Hard disk / SSD
+
+Your JavaScript file:
+
+```javascript
+let x = 10;
+let firstname = "Dhaval";
+```
+
+is stored as a **file on your SSD/HDD**.
+
+For example:
+
+```text
+C:\project\app.js
+```
+
+The file contains the program/code.
+
+---
+
+### 2. When you run the program
+
+The operating system loads the required program/code into **RAM**.
+
+The JavaScript engine (for example, V8 in Chrome/Node.js) executes it.
+
+Conceptually:
+
+```text
+SSD
+ │
+ │ Load program
+ ↓
+RAM
+ │
+ ├── JavaScript code
+ ├── Variables
+ ├── Objects
+ ├── Call stack
+ └── Heap
+```
+
+---
+
+### 3. Where are `x` and `firstname`?
+
+For:
+
+```javascript
+let x = 10;
+let firstname = "Dhaval";
+```
+
+during execution, the variables and their runtime values are handled in **RAM**.
+
+Conceptually:
+
+```text
+RAM
+│
+├── x → 10
+│
+└── firstname → "Dhaval"
+```
+
+The exact internal memory representation is controlled by the JavaScript engine, so you shouldn't assume every variable maps to a simple fixed RAM location.
+
+---
+
+## What about bits and bytes?
+
+RAM stores information using **bits**, and memory is generally addressed in **bytes**.
+
+For example:
+
+```text
+1 byte = 8 bits
+```
+
+But you should **not** assume:
+
+```text
+let x = 10;
+```
+
+means:
+
+```text
+x = exactly 4 bytes in RAM
+```
+
+JavaScript engines use optimized internal representations, and the ECMAScript specification doesn't define these physical memory layouts.
+
+---
+
+## What is "auxiliary memory"?
+
+**Auxiliary/secondary storage** generally means:
+
+```text
+SSD / HDD
+```
+
+It is used for persistent storage.
+
+For example:
+
+```text
+Your project
+   ↓
+SSD/HDD
+   ├── app.js
+   ├── package.json
+   └── node_modules/
+```
+
+When you execute the application, the operating system and runtime load what is needed into RAM.
+
+---
+
+## One important correction about ROM
+
+You said:
+
+> "variables and all will be stored in ROM space [hard-disk/auxiliary space]"
+
+❌ This is incorrect.
+
+**ROM ≠ HDD/SSD.**
+
+| Memory      | Purpose                                                                                                      |
+| ----------- | ------------------------------------------------------------------------------------------------------------ |
+| **RAM**     | Temporary working memory while programs execute                                                              |
+| **SSD/HDD** | Persistent storage for files/programs                                                                        |
+| **ROM**     | Non-volatile memory traditionally used for firmware; not the normal place where your JS variables are stored |
+
+### Easy interview explanation
+
+> **"The JavaScript source code is stored on secondary storage such as an SSD. When we run the program, the required code and runtime data are loaded into RAM. During execution, variables, objects, stack data, and heap data are managed in RAM. The exact memory representation is determined by the JavaScript engine and is not specified by ECMAScript."**
+
+And one more important point: **the entire project is not necessarily loaded into RAM at once.** The OS/runtime loads the portions and resources that are needed.
+
+  */
+
+
+console.log('-------------------------------------------------------------------------');
+
+ /**
+  * Explain why Non-primitive is called "reference type" as well?
+  * 
+  * Because **non-primitive variables usually hold a reference to an object**, rather than storing the object's actual value directly.
+
+Let's make it very simple.
+
+### Primitive type
+
+```java
+int a = 10;
+int b = a;
+```
+
+Think of it as:
+
+```text
+a → 10
+b → 10
+```
+
+`b` gets its **own copy** of the value.
+
+If you change `b`:
+
+```java
+b = 20;
+```
+
+you get:
+
+```text
+a → 10
+b → 20
+```
+
+They are independent.
+
+---
+
+### Non-primitive / reference type
+
+Consider:
+
+```java
+Person p1 = new Person();
+Person p2 = p1;
+```
+
+Conceptually:
+
+```text
+p1 ─────┐
+        ↓
+     [Person Object]
+        ↑
+p2 ─────┘
+```
+
+`p1` and `p2` don't contain the entire `Person` object.
+
+They contain a **reference to the same object**.
+
+Therefore:
+
+```java
+p2.name = "Dhaval";
+```
+
+You can access the same object through `p1`:
+
+```java
+System.out.println(p1.name);
+```
+
+Output:
+
+```text
+Dhaval
+```
+
+That's why it's called a **reference type**.
+
+---
+
+### The easiest analogy 🏠
+
+Think about an actual house.
+
+```text
+House
+Address: 123 Main Street
+```
+
+You give two people the address:
+
+```text
+Person A → 123 Main Street
+Person B → 123 Main Street
+```
+
+There is still **one house**, but two people have its address/reference.
+
+Similarly:
+
+```text
+p1 ──→ Object
+p2 ──→ Object
+```
+
+There is **one object**, but multiple references can point to it.
+
+### Important terminology
+
+In Java, common reference types include:
+
+```text
+Class
+Array
+Interface
+String
+Enum
+Objects
+```
+
+For example:
+
+```java
+String name = "Dhaval";
+int[] numbers = {10, 20, 30};
+Person person = new Person();
+```
+
+Here `name`, `numbers`, and `person` are variables whose values refer to objects.
+
+**So the key difference is:**
+
+> **Primitive → variable directly holds a value.**
+> **Reference type → variable holds a reference to an object.**
+
+  */
