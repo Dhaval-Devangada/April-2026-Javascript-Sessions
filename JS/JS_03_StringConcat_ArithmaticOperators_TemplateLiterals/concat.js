@@ -3,7 +3,7 @@
  */
 /**
  * concat is same concept as other languages but you will see some weird things in js
- *anything other than + > it will be a mathematicale calculation
+ * anything other than + > it will be a mathematicale calculation
  */
 
 let x = 100;
@@ -51,7 +51,7 @@ console.log(a + b + (x + y));//seleniumplaywright300
 //with backtick how can we print
 console.log(`${a}${b}${x + y}`); //seleniumplaywright300
 console.log(`${a} ${b}${x + y}`); //selenium playwright300 // i wanted to give space after selenium
-console.log(`${a}${b}${x + y + 80}`); //seleniumplaywright380 // whatever is there after placeholder, it will start concatinating it  //in backtick/placehokder we need to write code as an expression otherwise it will start concatinating 
+console.log(`${a}${b}${x + y + 80}`); //seleniumplaywright380 // whatever is there after placeholder, it will start concatinating it  //in backtick/placeholder we need to write code as an expression otherwise it will start concatinating 
 console.log(`${a}${b}${x + y}100-20`); //seleniumplaywright300100-20 // whatever is there after placeholder, it will start concatinating it 
 console.log(`${a}${b}${x + y}(100-20)`); //seleniumplaywright300(100-20) // whatever is there after placeholder, it will start concatinating it 
 console.log(`${a}${b}${x + y}${100-20}`);//seleniumplaywright30080
@@ -75,7 +75,7 @@ console.log("1" + "1");//11 // both are string, so string are always be concatin
 
 console.log("--------------");
 /**
- * sub operator
+ * substraction operator
  */
 
 //it will give you > error,11 , 0 or what?
@@ -83,14 +83,14 @@ console.log(1 - "1"); //1 - 1 = 0
 //the o/p is 0 here 
 //here we have - minus operator
 //concatination applies only for the + operator
-// first 1 is number and 2nd "1" is string but js will convert it to number 
+// first 1 is number and 2nd "1" is string but js will convert it[string] to number 
 console.log("5" - 2); //5 - 2 = 3  // first "5" is string but js will convert it to number first and 2nd 2 is number then sub operation willbe performed
 console.log("10" - "4"); //10 - 4 = 6 // both are string and will be converted to number then sub operation will be performed
 
 //in js errors are very rare because js is super flexible 
-//what will the o/p of below? > hello, error, nothing or something
+//what will the o/p of below? > hello, error, nothing or something?
 console.log("hello" - 2); //NaN -- not a number
-//we can not convert "hello" into any number so we can not do -2 from string so that why o/p NAN
+//we can not convert "hello" into any number so we can not do -2 from string so that why o/p > NAN
 
 console.log(10 - "naveen");//NaN
 
@@ -136,7 +136,7 @@ console.log(+d + 10);//55
 
 //playwright example 
 let totalAmount = "2000";// this is coming from UI // whenever we are reading anything from the web its always coming in the form of string
-console.log(+totalAmount + 200); //2000 + 200 = 2200 // because of +[unary plus operator] sting "2000" will be converted to number
+console.log(+totalAmount + 200); //2000 + 200 = 2200 // because of +[unary plus operator] string "2000" will be converted to number
 
 //Unary Negation (-) : 
 console.log(-"42" + 100); //-42 + 100=58 //string "42" will be converted to -42 due to - [unary negation] sign
@@ -156,13 +156,12 @@ console.log(1 + +"2");//1 + +2 = 3
 console.log(+"hello" + 2);//nan // we can not convert string to number
 
 
-let marks = "-100"; // this is full string its - minus sign us between the string as well
-console.log(-marks + 20);
-
+let marks = "-100"; // this is full string its - minus sign as between the string as well
+console.log(-marks + 20);//120
 
 
 let number = '100';
-console.log(`${-number + 20}`);// we need to wtite expression format withing the curly barces {} we need to write
+console.log(`${-number + 20}`);//-80// we need to wtite expression format within the curly barces {} we need to write
 
 /**
  * if there is + operator then its always considered as what 

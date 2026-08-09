@@ -27,7 +27,7 @@ console.log(address);
 
 /**
  * What we have done in the address
- * we have written multiple lines with any balkslash
+ * we have written multiple lines without any balkslash
  * with backtick we can write paragraph also
  * we can write multiple lines, we don't need to worry about anything 
  * it's so easy to write
@@ -38,7 +38,6 @@ console.log(address);
 
 /** let tempAddress = '101 new bhuilding
  whitefield'
-*/
 
 /**
  * below data can come in multiple lines 
@@ -58,7 +57,7 @@ console.log('the value of b: ' + b);//the value of b: 200
 console.log('the sum is : ' + (a + b)); //the sum is : 300 // if we don't write (a + b) in bracket then o/p is > the sum is : 100200
 
 //Above is the approach we follow in every programming language to print variable value with proper messaging 
-//Above approach is weired approach because we need to write "+" operator and then (a+b) in brckate and all 
+//Above approach is weired approach because we need to write "+" operator and then (a+b) in brackate and all 
 //so backtick/template litreals will solve above problems 
 
 //I want to do any concatination and don't want to use + sign so what we can do is below 
@@ -109,7 +108,7 @@ console.log("//input[text()='Virat Kohli']");
 console.log(`//input[text()='Virat Kohli']`);
 
 //but the Virat Kohli is the variable part > usename could be anything 
-// i really wan to append username 
+//i really want to append username 
 console.log(`//input[text()='${username}']`); // //input[text()='Virat Kohli']
 console.log(`//input[text()="${username}"]`);//  //input[text()="Virat Kohli"] // we can maintain the placeholder in double code as well
 

@@ -5,7 +5,7 @@
 console.log(1 + 1);//2
 console.log(1 - 1);//0
 console.log(10 / 2);//5
-console.log(10 / 3);// 3.3333333333333335 //js will not do the any trunction/round off//samer thing in java will give you 3
+console.log(10 / 3);// 3.3333333333333335 //js will not do the any trunction/round off//same thing in java will give you 3
 console.log(5 / 2);// 2.5
 
 console.log(5.0 / 2);//2.5
