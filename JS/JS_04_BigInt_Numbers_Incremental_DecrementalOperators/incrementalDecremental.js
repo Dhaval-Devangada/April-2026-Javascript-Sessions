@@ -24,12 +24,12 @@ console.log(y);//-99
 
 //below will give me 10 or 11?
 //console.log says -> you give me the "num" immediately -> so it will print the 10 -> then later increment will be done and the value will become 11
-//so console.log will connsume the original value of num
+//so console.log will consume the original value of num
 //and later on if we print the value then we will get 11 [js will go and check in the memory that what is the latest value of num]
 let num = 10;
 console.log(num++);//10
 
-console.log(num);
+console.log(num);//11
 
 
 //2. pre(before) increment:  [increase the value before]

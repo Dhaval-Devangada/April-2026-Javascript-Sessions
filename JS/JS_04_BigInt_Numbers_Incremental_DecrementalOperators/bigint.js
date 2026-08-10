@@ -4,10 +4,12 @@
 
 //To check upto what number i can go  / up to what leavel i can go in number
 console.log(Number.MAX_SAFE_INTEGER);
+console.log(Number.MIN_SAFE_INTEGER);
 //9007199254740991 // this is maximum range of the number 
-//beyond that if we go then we might get some wrog result/output
+//beyond that if we go then we might get some wrong result/output
 //so to avoid wrong result > what is the safer option for us for 'long numbers' and 'double numbers' and 'big int number'
 
+//to check the limit of MAX// below should give wrong output
 console.log(9007199254740991 + 12232);
 
 // so js we have concept of bigint 
@@ -54,13 +56,13 @@ console.log(-10n); // this is negative big int
 console.log(90071992547409911212n + 1212121n);//90071992547411123333n
 
 console.log("100n" + 10n);//100n10 [n of 10n will not be printed when we conctinate] 
-//we we do the concatination then n from 10n willbe removed > due to concatination
+// we do the concatination then n from 10n willbe removed > due to concatination
 
 console.log(+"100n" + 10n);//100 + 10n
 //above will give error > error > TypeError: Cannot mix BigInt and other types, use explicit conversions
-//why erroe > +"100n" can not be converted to BigInt > it will considered as normal 100 number
+//why error > +"100n" can not be converted to BigInt > it will considered as normal 100 number
 //and we can not calculation of normal number with bigInt 
-//+ [unary operator] can not convert sting Bigint to Bigint > it will convert to normal number
+//+ [unary operator] can not convert string Bigint to Bigint > it will convert to normal number
 //BigInt can not be converted
 
 
@@ -95,4 +97,4 @@ console.log(phone.length); //10 // here length is a property and not a function.
 console.log(tel.length);//19
 
 //salary should be string or number > number > because we want to add bonus + pf + tax calculation / we can do other calculation on salary 
-//all the billing amount should be number > i really wan to perfome some calculation on it 
+//all the billing amount should be number > i really want to perfome some calculation on it 

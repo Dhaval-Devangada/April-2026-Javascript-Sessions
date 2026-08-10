@@ -99,8 +99,8 @@ console.log(typeof finalBill);
 
 //another way of converting number to string 
 let foodBill = 600;
-foodBill=String(foodBill);
-// console.log(String(foodBill));
+//foodBill=String(foodBill);
+console.log(String(foodBill));
 console.log(typeof foodBill);//string
 
 /**
@@ -119,11 +119,12 @@ console.log(+marks + 20);//100+20=120
 let marks = 100;
 marks = "" + marks;
 //number to string
-// console.log("" + marks);//"100"
+ console.log("" + marks);//"100"
 console.log(typeof marks);//number
 
 //BingInt to String
 let myNum = 1000n;
+myNum=myNum + "" + 200
 console.log(myNum + "" + 200);//"1000"+200=1000200  <-this is string
 console.log(typeof myNum);
 
@@ -139,7 +140,7 @@ console.log(myNum + 10n);//1010n // n is used to represent bigInt number [bigInt
 
 //EsLint - This is used for static analysis [about code coverage, coding practices we are following, variable names,right use of string or numbers]
 //it will tell you about the problems in the code 
-//code is working fine but it will tell what things are unnecessary -> sonarQube for java //eslint is for js
+//code is working fine but it will tell what things are unnecessary -> sonarQube for java //es-lint is for js
 
 // we can not convert bigInt to number 
 
@@ -163,7 +164,7 @@ console.log(10 !== "10");
 // another way of converting number to string
 let foodBill = 600;
 
-console.log(String(foodBill)); // "600"
+console.log(String(foodBill)); // 600
 console.log(typeof foodBill);  // number
 
 
