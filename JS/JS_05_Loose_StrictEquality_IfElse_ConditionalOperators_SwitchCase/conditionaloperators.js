@@ -21,7 +21,7 @@ else {
     console.log('you are not eligible for voting');
 }
 
-//we can write only if as well but if something is not working/satisfied then it's over responsibilty to give user
+//we can write only "if" as well but if something is not working/satisfied then it's over responsibilty to give user
 //some message that something is not working  / something is not satisfited
 //always give proper message to user 
 // so just write "if" part is bad way of writing the program
@@ -52,7 +52,7 @@ if (false) { //dead code/unreachable
 else {
     console.log('Bye!!');
 }
-//so conclusion is we should not write direct "true" and "false". we should avoide that 
+//so conclusion is, we should not write direct "true" and "false" in (). we should avoide that 
 //it does not make any sense as well
 //so what is the right practice 
 //right practice is always -> create a variable name
@@ -70,7 +70,7 @@ else {
 
 
 
-// cross browser logic:
+// cross browser logic:s
 //pass "chrome" and "safari" and check output and issues/bug
 
 let browser = 'chrome'; 
@@ -96,20 +96,21 @@ else {
  * plz pass the right browser....
  * 
  * so above o/p is not correct
- * writing if-else like above is the ugaly way of writing code 
- * we haved launched the browser still it's saying that 'plz pass the right browser....'
+ * writing if-else like above is the ugly way of writing code 
+ * we have launched the browser still it's saying that 'plz pass the right browser....'
  * 
  * if we pass "safari" then 
  * o/p 
  * safari
- * js will not go to else part because if part is executed [last if and else block is paired]]
+ * js will not go to else part because if part is executed [last if and else block is paired]
  * 
  * 1st bug - if we pass chrome -> first if block will be executed -> all if block won't be execueted but just the condition part will be executed 
- * //if the first condition is satisfied then why is it going to all other condition unnecessarly  and going to else part as well- major performance issue 
+ * //if the first condition is satisfied then why is it going to all other condition unnecessarly and going to else part as well- major performance issue 
  * //if first condition is satisfied then it's done  
  * //if browser = safari in that case as well, js will go through each and every condition 
  * //if we have 100 condition and safari is at last condition then js will go through all the condition which is not good 
  * //js should directly jump to safari
+ * 
  * 2nd bug - we haved launched the browser still it's saying that 'plz pass the right browser....'
  * 
  * //we can not write the break in if-else conditions
@@ -117,14 +118,15 @@ else {
  * 
  * 
  * so what is the soluation to above problems 
- * if-else if condition
+ * "if-else if" condition
  */
+
 //first we need to understand problem statement
 // then what is the need 
-//what we need if-else if - what problem does it solves
+//what we need "if-else if" - what problem does it solves
 //if - else if:
 
-let browser = 'ie';  //if "ie" is found then js will not go to any other else block
+let browser = 'safari';  //if "ie" is found then js will not go to any other else-if /else block
 
 if (browser === 'chrome') {
     console.log('launch chrome');
@@ -164,7 +166,7 @@ else {
  * again performance issue 
  * if last condition is satisfied then also it will check 1-99 also
  * 
- * if-else if is batter soluation compared to if-if-else soluation[first program]
+ * "if-else if" is batter soluation compared to if-if-else soluation[first program]
  */
 //so above code has a performance issue because if last condition is satisfied then also it will check 1-99 also
 //to solve above issue we have switch case

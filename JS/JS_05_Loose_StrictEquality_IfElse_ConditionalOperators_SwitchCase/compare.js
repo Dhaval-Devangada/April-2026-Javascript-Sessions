@@ -16,7 +16,7 @@ console.log(10 == 10); // both are value and both same so it will give you true
 console.log(10 == "10");
 //10[number] == 10[string] ==> true  [we are comparing number vs string]
 //So js says how exactly you are comparing -> you are comparing with ==
-//js don't bother about the single quote and double quote  and backtick
+//js don't bother about the single quote and double quote and backtick
 //js will always convert string to number 
 //in js this level of flexibility is allowed in other languages it's not allowed 
 
@@ -77,7 +77,7 @@ console.log(n1 === n2);// values same - types diff - stric equality
 console.log(null == undefined);//both are exctly same //true [null is also no value , undefine also no value] [null - we generally define for the object type value and udefine for the normal variable]. so as per js both are no values no values
 console.log(null === undefined);//types -> object vs undefine//false 
 //we first we need to check type of "null" and "undefined"
-//type of "null" is object which an legasy bug in js 
+//type of "null" is object which an legacy bug in js 
 
 console.log(typeof null);//object
 console.log(typeof undefined);//undefined
@@ -98,7 +98,8 @@ console.log([] === []); //121212 == 1212343 //false  [memory to memory comparasi
 console.log(typeof []); //object
 
 console.log("" == ""); //0 == 0 : true [any blank value will be converted to 0 ]
-console.log([] == []); // array willbe considered as an object [memory comparasion]
+console.log(""==="");//true
+console.log([] == []); // array will be considered as an object [memory comparasion]
 
 console.log(null==null);//true
 console.log(null==[]);//false -> null is seprate value and [] is seprate value [null is no value and second is empty array]
