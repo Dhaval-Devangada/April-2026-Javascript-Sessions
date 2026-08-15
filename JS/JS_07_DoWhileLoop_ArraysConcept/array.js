@@ -24,7 +24,7 @@
  * in java we have dynamic and static array seprately
  * 
  * what we can store in array?
- * if we have create darry for number then we can store any int , 50.5 ...any number we can store in the array
+ * if we have create array for number then we can store any int , 50.5 ...any number we can store in the array
  * but my reqyirement is that i want to store only string, so what kind of array we will create - string array
  * 
  * what is the sign of the array - lets say we have a string array which stores products so in that case sign is - product[]
@@ -41,7 +41,7 @@
  */
 
 /**
- * lets say we have variable "i" want to store multiple values in that can we do that - No 
+ * lets say we have variable "i" - want to store multiple values in that can we do that - No 
  * check below example 
  */
 
@@ -52,7 +52,7 @@ i = 30;
 /**
  * above we have not stored multiple values
  * we have only reassigned the values 
- * we we print the "i" then only 30 will be printed 
+ * we print the "i" then only 30 will be printed 
  * 
  * if we want to maintain all 10,20 and 30 in single variable then array will come into the picture 
  */
@@ -64,7 +64,7 @@ i = 30;
 //data: different data type : Hetrogenous
 
 let num = [1, 2, 3, 4, 5]; //length of array is 5;  range is 0-4
-console.log(num.length);// here length is property , here we don't have size
+console.log(num.length);// here length is property , here we don't have size[in java we have size]
 
 let len = num.length;
 console.log("Hi = ", len - 1);
@@ -74,7 +74,7 @@ console.log("Li = ", 0);
 console.log(num[0]);
 console.log(num[1]);
 console.log(num[4]);
-//what will bw the o/p when we try to access the index where we don't have any value 
+//what will be the o/p when we try to access the index where we don't have any value 
 //in js if you try to acccess something which is not available then you will get undefined and will not give exception "array index out of bound" like java
 //js is super flexible ..it will not give you any exception. it will give you undefined
 console.log(num[5]);//undefined
@@ -130,7 +130,7 @@ console.log(marks); // [ 10, 20, 30, 40, '-1': 5 ]
 //remember that length will be calculated on the basis of the values and not on the basis of the property
 //because values are the actual values so length will be 4 
 console.log(marks.length);//4
-//so the conclusin is that we can not add values on the negative index 
+//so the conclusion is that we can not add values on the negative index 
 //it will be added as a property in the form of key and value pair format and not as a values 
 //so whenever we try to add negative index then it will be added as a property
 // and that property will be not added in the length calculation - length will be always be added on the basis of the values
@@ -139,7 +139,7 @@ console.log(marks.length);//4
 console.log(marks[-1]); //5 - but it want be considered as value [-1 is a key here and what's the value of that key 5]
 //key: value
 //-1: 5
-//if we have not anything on negative index then it will give us undefined
+//if we have not added anything on negative index then it will give us undefined
 
 marks[-100] = 9000;
 console.log(marks); //[ 10, 20, 30, 40, '-1': 5, '-100': 9000 ] // so now we have pair number one and pair number two
@@ -169,14 +169,14 @@ console.log(empData[0]);
 let number = [10, 20, 30, 40]; 
 console.log(number);
 
-for (let i = 0; i<=3; i++) { 
+for (let i = 0; i<=3; i++) { //let declares "i" so JavaScript knows that i is a variable
     console.log(number[i]);
 }
 // in above program over array size is 3 so in the for loop we have added the condition "i<=3;"
 //but what if tomorrow array size is increased - because array in js is dynamic 
 //at that time we want be able to traverse the elements from the 4th index or we need to update the code/condition
 //so instead of hard-coding we should write dynamic code/generlize formula 
-//using highest index we can iterate up to heightst >using arrys length function we can get the heighst index 
+//using highest index we can iterate up to heightst > using arrys length function we can get the heighst index 
 //for arrays always write the condition in the form of heights index
 
 
@@ -192,7 +192,7 @@ for (let i = 0; i <= number.length - 1; i++) {
 
 console.log('-----------------');
 
-//to print the arrayt in reverse order
+//to print the array in reverse order
 for (let i = number.length - 1; i >= 0; i--) {
     console.log(number[i]);
 }
@@ -238,4 +238,4 @@ while (i <= num.length - 1) {
 let arr = [1, 2, 3, 4, 5];
 arr[-1] = 100;
 arr[-2] = 300;
-console.log(Object.getOwnPropertyNames(arr));
+console.log(Object.getOwnPropertyNames(arr)); //[ '0', '1', '2', '3', '4', 'length', '-1', '-2' ] // printing only properties of an array //positive index and negative index is property, length is property
