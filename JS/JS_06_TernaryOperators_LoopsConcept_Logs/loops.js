@@ -16,17 +16,17 @@ console.log(3);
 //if we can see that there is pattern (1,2,3...) then we should use loop 
 /**
  * Suppose print each and every value from the dropdown [200 values in country dropdown]
- * we don't manual go and print it on console for each and every value - we don't write console.log for each and every value 
- * we write the for loop and the go each and every value and prinit it on console
+ * we don't manually go and print it on console for each and every value - we don't write console.log for each and every value 
+ * we write the for loop and the go each and every value and print it on console
  * 
- * so whenever we see that some kind of work is getting repetetive - start putting that in put 
+ * so whenever we see that some kind of work is getting repetetive - start putting that in loop
  */
 
 
 //while:
 /**
  * start -> check the condition -> true -> execute statement -> check condition -> true -> execute statement ....keep going -> loop created - > infinite loop
- * we got struck inside he loop - loop is known as infinite loop
+ * we got struck inside the loop - loop is known as infinite loop
  *
  * so we have to write conditin in such a way, that we never get inside the infinite loop > we have to come outside of the loop. this is the most important concept in loops 
  * 
@@ -59,7 +59,7 @@ while (true) {
     console.log('welcome to NAL');
 }
 
-//to break the infinite loop usew break
+//to break the infinite loop use break
 while (true) {
     console.log('welcome to NAL');
     break; // break can be used in switch case and break can be used with loop as well
@@ -93,7 +93,8 @@ while (l <= 10) {
  * compare below example with playwright 
  * like in dropdown there are 100 values
  * I will keep checking values 
- * if dropdown value is india then come out of the dropdown 
+ * if dropdown value is india select it then come out of the dropdown 
+ * 
  * in above program all the values will be printed 
  */
 //we can write if condition inside the while loop as well 
@@ -112,7 +113,7 @@ while (l <= 10) {
 
 
 /**
- * We can get the infinite loop with the for loop as well if the condition is wrong 
+ * We can get the infinite loop with the "for loop" as well if the condition is wrong 
  * flow
  * initilization -> check the condition -> true -> perform the action -> increment/decrement -> check the condition ....keep going -> condition true  -> perform action -> infinite loop 
  * initilization -> check the condition -> true -> perform the action -> increment/decrement -> check the condition ....keep going -> condition false  -> exit
@@ -175,7 +176,7 @@ for (let n = 1; n <= 100; n++) {
  * Both loop are doing same thing 
  * We can put condition in both loop 
  * We can increase/decrase in both loops 
- * So why we need bot >
+ * So why we need both >
  * what will be the difference when we use it practicaly 
  * technically syntax is different but fundamentals are exactly same because ultimately both are loops 
  */
@@ -184,19 +185,19 @@ for (let n = 1; n <= 100; n++) {
 //while use cases: when number of iterations are not fixed [it means i really don't know that how many times i need to iterate then i will start with the while loop ]
 //wait for element on the page: [do we really know that after how many seconds element will appear on the page? - NO, it can appear after 2/3/6/10/15 seconds - We have no idea howmany seconds i have to wait]
 //wait for page loading:  [i want to processed further on my page once the page is loaded. Time is fixed or not?. Thers is no fixed time - application is very slow today, bandwith/network  is very slow. so it might take more time. sometime it's very fast so application will be loaded in 2 secondes as well]
-//webtable pagination: back 1 2 3 4..7.10 next [i am looking for produt available on the 4th page- but there is no gauranty that that product is always available on the 4th page. Today its on the 4th page but tomorrow it got shifted on the 5th / 6th page as more products got added. so number of itterations are not fixed]
-//infinite scrolling: [instagram,linkden][we don't know that dhaval's post will appear after 10 post..so keep scrolling down][zomato,swigy,facebook feed ...keep scrolling down...the moment you saw the your favourite restaurant on zomato and swigy - you click on it and break the loop. Because i have no idea that how many scrolls i have to perform here][how many scroll and how many iterations i need to do are not fixed][so in such cases i need to use while loop]
+//webtable pagination: back 1 2 3 4..7.10 next [i am looking for product available on the 4th page - but there is no gauranty that that product is always available on the 4th page. Today its on the 4th page but tomorrow it got shifted on the 5th / 6th page as more products got added. so number of itterations are not fixed]
+//infinite scrolling: [instagram,linkden][we don't know that dhaval's post will appear after 10 post..so keep scrolling down][zomato,swigy,facebook feed ...keep scrolling down...the moment you saw the your favourite restaurant on zomato and swigy - you click on it and break the loop. Because i have no idea that how many scrolls i have to perform here][how many scroll and how many iterations i need to do, are not fixed][so in such cases i need to use while loop]
 //calendar: march 2027
 //carousel: 
 
 //for loop use cases: when number of iterations are fixed
 //month dropdown jan to dec:[how many times we need to iterate] 1 to 12 [it will never happen that tomorrow 2 more months will be added this is an universal truth]
 //day: 1 to 31 [maximum 31 days are avilable]
-//footer links [when number of iteration are fidxed in side banner and footer then always go with for loop]
+//footer links [when number of iteration are fixed in side banner and footer then always go with for loop]
 //array : 5 : 0 to 4
 
 /**
- * so whenever in anyframe work you see while loop then immedeately it should click on your mind that
+ * so whenever in anyframework you see while loop then immedeately it should click on your mind that
  * there is concept that number of iterations are not fixed
  * but for for loop number of iterations are fixed
  */
@@ -226,7 +227,7 @@ while (name === 'naveen') {
  * do-while says 
  * when you start the loop then don't check the condition immediately 
  * you immediately execute the statement here - you execute the statement at least once
- * the after you check the condition and if condition is satisfied then again you execute the statement -> condition satisfied -> execute statement > ...keep going --> condition satisfied ->execute the statement >infinite loop
+ * then after you check the condition and if condition is satisfied then again you execute the statement -> condition satisfied -> execute statement > ...keep going --> condition satisfied ->execute the statement >infinite loop
  * so we have to write a condition in such a way that we can come out of this loop 
  * start the loop-> execute the statement -> condition is not satisfied -> exit
  * so in above case how many times statement got executed -> at least once 
@@ -273,16 +274,16 @@ while (p <= 10);
 
 
 /**
- * below example - is to check when condition is not satisfie
+ * below example - is to check when condition is not satisfield
  */
-let p = 1;
+let p = 1; //p =1 
 do {
    
-   console.log(p);
-   p++;
+   console.log(p); //1
+   p++;//2
 }
-while (p >= 10);
-console.log(p);
+while (p >= 10); //2>=10 = flase 
+console.log(p);//2
 //in above case do block is getting executed at least once
 
 /**
@@ -302,11 +303,11 @@ while (p <= 10);
  * what will be o/p in below case?
  * we are writing "p++" above and below the console.log 
  */
-let p = 1;
+let p = 1; //1
 do {
-   p++;//2
-   console.log(p);//2
-   p++;//3
+   p++;//2,4,6,8,10
+   console.log(p);//2,4,6,8,10
+   p++;//3,5,7,9,11
 }
 while (p <= 10);
 //o/p > 2,4,6,8,10
@@ -333,7 +334,7 @@ let p = 1;
 do {
     console.log(p);// 1
     ++p;
-    break; // break will break the  entire do-while loop // break should be used with the condition
+  //  break; // break will break the  entire do-while loop // break should be used with the condition
 }
 while (p <= 10);//T  // in the do-while loop while does not have any body , body/logic will be written inside the do part 
 
@@ -351,7 +352,7 @@ while (p <= 10);//T  // in the do-while loop while does not have any body , body
 // everything we can do with the for loop as well
 // Above are the varietes of options given to us
 
-// To reload the window search ">" then select reload the window options [do this when your vs code is not behaving correctly]
+// To reload the window search, ">" then select reload the window options [do this when your vs code is not behaving correctly]
 //or suppose in case of infinite loop if you have used a lot of memory then after that if you are running any program and that program is not behaving correctly then "reload the window"
 
 
