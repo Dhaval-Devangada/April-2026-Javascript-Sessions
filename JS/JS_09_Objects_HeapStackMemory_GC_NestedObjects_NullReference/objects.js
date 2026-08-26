@@ -5,24 +5,34 @@
  * stack memory is for the primitive data type 
  * primitive means - memory is fixed
  * primitve data type -  string, number, boolean,variables
- * in java string is an object but its primitive data type 
+ * in java string is an object but in js its primitive data type 
  * 
  * but the heap is specially designed for reference type. reference type means non-primitive
  * and non-primitive means - dynamic in nature
  * dynamic means - in the array we can add/remove "n" number of values
- * size is not fixed in non-primitive values / we really don't know that hoe many values we want to store it here
+ * size is not fixed in non-primitive values / we really don't know that how many values we want to store it here
  * in js "functions" will also be stored inside the heap memory
  * no-primitive -> functions, objects, arrays
  *
  */
 
-const { use } = require("react");
+/**
+ * JavaScript has 7 primitive types:
+ * string
+   number
+   bigint
+   boolean
+   undefined
+   symbol
+   null
+ */
+
 
 /**
  * what do you mean by object? or what exactly it is representating?
  * objects is a collection of data
  * objects is a collection of some related data
- * and data will be stored in key-value formate
+ * and data will be stored in key-value format
  * for example - you are the object
  * we all are the objects 
  * so what are the properties? we all are having some properties 
@@ -37,11 +47,11 @@ const { use } = require("react");
  * chasisNum = ndnskdnkd8
  * 
  * so these particular objects is hvaing multiple properties in the form of key and value pair format
- * so we can say object is just a collection of what - collection of related data - related data means - data which is available in the form of key-value pair format
+ * so we can say object is just a collection of what? - collection of related data - related data means - data which is available in the form of key-value pair format
  * 
  * here in js we can create the object without the classes as well 
  * we still have not introduced the classes and before that we are learning the object
- * in java we can not write the single line oif code without the class
+ * in java we can not write the single line of code without the class
  * if you have seen so far we have not created any class as well 
  * we can create the class as well 
  * 
@@ -55,7 +65,7 @@ const { use } = require("react");
  * so how to create the object in js?
  * object will always be written within the curly braces
  * {};
- * and in between these two curly braces we have two write key-value pait formats
+ * and in between these two curly braces we have two write key-value pair formats
  */
 let user = {
     name: 'Vinay', // key is "name" and the value is "Vinay" and what kind of value it is - string 
@@ -87,7 +97,7 @@ let user = {
  * so how we will read 
  * whatever we have inside the {} is object here {name: 'Vinay',age: 30,city: 'pune',zip: 1212,} and this object will go inside the heap memory
  * and "user" is a reference variable and this reference variable will start pointing to the objet which is inside the heap
- * and this reference variable will start pointing to the partucular object which is stored inside the heap 
+ * and this reference variable will start pointing to the particular object which is stored inside the heap 
  * 
  * so what is object here?
  * user is the object or whatever we have written inside the {} is the object?
@@ -102,7 +112,7 @@ let user = {
  * reference variable name we can write anything 
  * so "user" is not the objet -> "user" is the object reference variable 
  * 
- * who is representating my body > Dhaval is representation my particular body
+ * who is representaing my body > Dhaval is representation my particular body
  * so in my particular body if i really want to call
  * thay hey my name is Dhaval
  * age is 30
@@ -129,18 +139,29 @@ console.log(user.age); //dot notation
 console.log(user['name']);//bracket notation
 console.log(user["city"]); //we can use single quote or double quote both 
 console.log(user['age']);
+console.log(user[`age`]); //we can also use the backtick as well
 //dot notation and bracket notation both are good practice - you can use any of them. but in gerenal practice we use dot notation. it's easy to use.
 
 //user = null then what will happen in the memory?
 user = null;
 /**
  * we had object and that object has 5 properties and "user" reference variable which is referring to that object
- * ans we can access properties using fot notation and bracket notation 
+ * and we can access properties using dot notation and bracket notation 
  * and now "user=null" so what does it mean?
- * That means user is pointing to object and at the same time user is pointing to "null" - Refer screenshot 2
+//  * That means user is pointing to object and at the same time user is pointing to "null" - Refer screenshot 2  - This is not correct - check below comment 
  * when the reference is started to pointed to null and we try to access any of the property then what error we will get?
  * we won't get null pointer exception in js 
  * we get an error saying "Cannot read properties of null"
+ */
+
+/**
+ * Refer screenshot 2 
+ * Initially, user references an object containing properties like name and age.
+ *
+ * After user = null, "user" no longer references that object.
+ *
+ * Therefore, user.name effectively attempts to access
+ * the name property from null, which causes a TypeError.
  */
 console.log(user.name); //null.name 
 /**
@@ -171,18 +192,19 @@ user = undefined; // we will get the error that "Cannot read properties of undef
  * we have big application running on server so ofcourse we have a lot of objects inside the heap
  * suppose we have RAM of 32 GB means hardware RAM
  * 
- * each and every ptogramming works how? 
+ * each and every programming works how? 
  * it will take the space from harddisk or from the RAM? - It will always take the space from RAM while running it
- * when we try to run the code then it will always take the space from RAM and RAM is a static memory while hard disk is a static memory 
+ * when we try to run the code then it will always take the space from RAM and RAM is a dynamic memory while hard disk is a static memory 
+ * RAM is volatile main memory used by running programs
  * assume js says that i need 1 GB from the RAM 
  * out of 1 GB heap is taking around 200 MB and stack is taking 300 MB and objects are getting created back to back
- * so heap memoty is getting suffocated, suppose we have reached 190 MB 
+ * so heap memory is getting suffocated, suppose we have reached 190 MB 
  * so due to high memory utilization our application will slow down /shutdown/it will impact the performance 
  * so very less memory left now and because of that my application may carsh 
  * so what should i do now?
  * Every programming language is having the concept of grabage collector 
  * GC is controlled by nodejs
- * GC will go inside the heap memory and it will start collecting those objects which are having null/undefined references
+ * GC will go inside the heap memory and it will start collecting those objects which are having null/undefined references - This is complicated so look dommnet > what are the objects will be collected by GC 
  * so because of that we will get more space now because unnecessary objects got deleted
  * this is auto mechanisam we don't need to do any code for GC / for deleting the objects which are referfed by null/undefined
  * GC is deleting the "objects" directly. GC is not deleting the "null" values which are there in stacks 
@@ -193,6 +215,12 @@ user = undefined; // we will get the error that "Cannot read properties of undef
  * everything is happning at the run time. GC will get activated at tun time as well
  * when you write the code, nothing will happen. Things will start comint into picture when you start running the code then the memory will be allocated 
  */
+
+/**
+ * comment for - what are the objects will be collected by GC
+   GC identifies objects in the heap that are no longer reachable from any live references (GC roots) and eventually reclaims their memory. 
+   Setting a reference to `null` or `undefined` can make an object unreachable, but `null`/`undefined` itself is not what GC looks for.
+*/
 
 /**
  * we have 200 MB for heap
@@ -206,7 +234,7 @@ user = undefined; // we will get the error that "Cannot read properties of undef
  * 
  * but whats the problem here?
  * if whole 200MB is occupied -> then application will crash or not? -YES because we don't have any space left 
- * we don't have any space left so we won't be able create any more  object.Means user is blocked  
+ * we don't have any space left so we won't be able create any more object.Means user is blocked  
  * so where exactly is the problem? -> problem is with the infrastructure /hardware /server 
  * So this is the problem we need to solve at infrastructure level
  */
@@ -271,7 +299,7 @@ let customer = { //customer is a reference variable
      * How the child object will be stored in the memory?
      * 
      * refer screenshot 4
-     * initially 1 object got created in heap and it is referred by "customer" reference variable, which in stack
+     * initially 1 object got created in heap and it is referred by "customer" reference variable, which is in stack
      * in that object we have 5 properties [name,age,phone,salary,isActive] and child object which has 4 properties[flat,building,city,zip]
      * here "address" is not a reference variable, it's a key. So "address" won't go inside the stack as its not a "reference variable"
      */
@@ -309,11 +337,13 @@ let user = {
     zip: 1212,
 };
 /**
- * Now i wnto to convert above normal JS object to JSON[Javascript object notation]
+ * Now i wan to convert above normal JS object to JSON[Javascript object notation]
  * This concept we are going to use it in API automation as well
  * here we are going to use "JSON" which is an existing interface/object inside the js/node
  * and we are going to use "stringify" method of JSON object
  * "stringify" method says > convert a Javascript value to a Javascript Object Notation string - JSON string
+ * 
+ * JSON - An intrinsic object that provides functions to convert JavaScript values to and from the JavaScript Object Notation (JSON) format.
  */
 
 //js object to JSON: serialization (marshelling)
@@ -329,8 +359,8 @@ console.log(typeof userJson);//string
 
 
 /**
-{ name: 'Vinay', age: 30, city: 'pune', zip: 1212 }
-{"name":"Vinay","age":30,"city":"pune","zip":1212}
+1.{ name: 'Vinay', age: 30, city: 'pune', zip: 1212 }
+2.{"name":"Vinay","age":30,"city":"pune","zip":1212}
 
 what is the difference between above two o/p?
 In firt o/p -> which is js object > keys are without double quotes
@@ -346,7 +376,7 @@ We need to pass JSON payload in POST call
 Suppose we want to create the USER 
 So for that first we create the the USER object like we have created above
 Then we convert the USER object to USERJSON by using JSON.stringify method 
-once we get the USERJSON then we will user the USERJSON with the POST call
+once we get the USERJSON then we will use the USERJSON with the POST call
 Because POST call does not understand what is JAVASCRIPT
 Whenever[Restassured/Postman/playwright] we are using POST call we need to supply JSON
 API understands only JSON - API does not understand what is JAVA/Javascript object
@@ -358,7 +388,7 @@ so that's why serialization (marshelling) is important
  * We can check it online 
  * Go and peast your o/p on > JSONLint 
  * and check that it's a valid JSON or not 
- * If the JSON is valid then its proved that JSON.stringify is converting the JS object vto JSON string
+ * If the JSON is valid then its proved that JSON.stringify is converting the JS object to JSON string
  * 
  */
 
@@ -373,7 +403,7 @@ console.log('====================================================');
 
 //JSON string ----> JS Object : De-serialization (Unmarshelling)
 //so here "userJson" is JSON string - its a normal string so it is stored inside the stack memory 
-let userObj = JSON.parse(userJson); //JSON is existing interface/object inside node //here we need to give valid JSON string to "parse" method and it will "Converts a javascript Object Notation/JSOn string" to an JS Object
+let userObj = JSON.parse(userJson); //JSON is existing interface/object inside node //here we need to give valid JSON string to "parse" method and it will "Converts a javascript Object Notation/JSON string" to an JS Object
 console.log(userObj);//{ name: 'Vinay', age: 30, city: 'pune', zip: 1212 }  //js object //keys will be printed without double quotes
 console.log(typeof userObj); //object 
 
@@ -424,7 +454,7 @@ let empJson = JSON.stringify(emp); //{"name":"Vinay","age":30,"city":"pune","zip
 console.log(empJson);
 
 /**
- * form the JSON string you can not access name,age..because it's a string ...you can access it from the object only
+ * from the JSON string you can not access name,age..because it's a string ...you can access it from the object only
  */
 
 /**
@@ -441,7 +471,7 @@ console.log(empJson);
 /**
  * GC is not always running 
  * It will go to heap when the V8 engine gives the instruction that Heap has low memory please go there and remove unnecessary objects 
- * if any reference varibale to null or if any object does not have any reference then - it dosen't mean that immediately GC will come and delete that particuler object.
+ * if any reference variable to null or if any object does not have any reference then - it dosen't mean that immediately GC will come and delete that particuler object.
  * we can say that object is eligible for the garbage collector 
  * GC will come when memory is really occupied and not much space left
  */
@@ -451,7 +481,7 @@ console.log(empJson);
  */
 
 /**
- * In framework - when we have large framework, there we have mny classes and objects. so we have large execution as well
+ * In framework - when we have large framework, there we have many classes and objects. so we have large execution as well
  * so do we have any memory recommadation practice to avoid heap memory growth because GC is automatic and not under over control
  * so should be make explicitly large object null once they are no longer needed? so that they become eligible for GC
  * 
@@ -480,7 +510,7 @@ const user ={
 
 user.name='naveen'; 
 
-//will above operation update the value of "name" from "vijay" to "naveen"? through we have used "const"
+//will above operation update the value of "name" from "vijay" to "naveen"? though we have used "const"
 //yes it will update because here "user" is "const" not the values 
 console.log(user);// { name: 'naveen', age: 30, city: 'Pune', zip: 1212 }
 
@@ -497,3 +527,13 @@ user = {
 
 const x = 10;
 x=20;
+console.log(x); //This will give error 
+
+
+console.log('----------------------------------------');
+
+//We can create the object like below as well where in we have used "double quotes" around the Key - because ultimately keys are "string" as well.
+let user = {
+    "name": 'Vinay',
+    "age": 30
+};
