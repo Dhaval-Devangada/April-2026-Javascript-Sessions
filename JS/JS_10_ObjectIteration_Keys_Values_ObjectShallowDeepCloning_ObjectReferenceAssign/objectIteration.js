@@ -88,7 +88,7 @@ for (let e in user) { //e will go to the "user"
     salary: 12.33,
     isActive: true
 }
- //Just give me the keys - Do we have anmy direct method for that?
+ //Just give me the keys - Do we have any direct method for that?
  //Use Object interface which is already available in the node/js
 console.log(Object.keys(user)); //keys - [ 'name', 'age', 'salary', 'isActive' ] //keys method is returing the "string[]" string array
 
@@ -140,7 +140,7 @@ for (let e in user) { //e will go to the "user" // in objects "e" is representat
 }
 /**
  *  in objects "e" is representating the key but if you apply the same thing in array then it is representating the "index"
- * so thats whay for...in loop is specially designed for the objects because it very easy for us to iterate teh array  
+ * so thats why for...in loop is specially designed for the objects because it very easy for us to iterate the array  
  */
 console.log("==========================");
 
@@ -157,13 +157,13 @@ console.log(userJson); //{"name":"Tom","age":20,"salary":12.33,"isActive":true}
 //above the output is json string and it's coming in horizantal line
 //so assume tomorrow we have big object where 20,30 properties are available 
 //so to make the json pretty print (print it properly)
-//rather than going to web/any website [json validator] - which will pretty print for use - but its length task 
+//rather than going to web/any website [json validator] - which will pretty print for us - but its length task 
 //so its good to pretty print here
 // we can do it with the "stringify"
 /**
  * stringify method says 
  * first give me that which object do you want to use - user
- * second parameter says give me replacer - do you wan to replace anything in this JSON - we don't have any replacer so we pass -  - null
+ * second parameter says give me replacer - do you want to replace anything in this JSON - we don't have any replacer so we pass -  - null
  * third parameter says, what is the spacing you want to use , spacing can be string also or it can be number also. so we are giving - 2 
  * so what do you mean by 2 
  * in output you will have 2 space before each key 
@@ -192,6 +192,7 @@ with 4 spacing output is below
 }
  */
 let userJsonWithPrittyPrintWith4 = JSON.stringify(user, null, 4);
+JSON.stringify()
 console.log(userJsonWithPrittyPrintWith4);
 
 /**
@@ -243,10 +244,23 @@ Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
  * so JSON.stringify(user, null, 4);
  * 
  * 
- * if ? is ther after the parameter then that parameter is optional otherwise and if ? is not there after the parameter then it's mendetory
+ * if ? is there after the parameter then that parameter is optional otherwise and if ? is not there after the parameter then it's mendetory
  * 
  * 
  */
+
+
+/**
+ * 1st parameter → What to convert?
+                 user
+
+2nd parameter → Do you want to filter/modify anything?
+                 No → null
+
+3rd parameter → How should it be formatted?
+                 2 spaces
+ */
+             
 
 /**
  * what will be the o/p of below? - empty array
@@ -255,4 +269,9 @@ let x1={
 
 }
 
-console.log(Object.keys(x1));
+console.log(Object.keys(x1));//[]
+console.log(Object.values(x1));//[]
+console.log(Object.entries(x1));//[]
+//whay Object.entries returning 1D array?
+//The key is that Object.entries() returns an array, and each entry inside that array is itself another array.
+//Because x1 is an empty object, there are no properties to convert.

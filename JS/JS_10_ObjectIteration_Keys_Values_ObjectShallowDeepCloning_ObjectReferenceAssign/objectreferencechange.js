@@ -81,14 +81,14 @@ console.log(u3);//M
 /**
  * so now howmany references are available for first object - none - 0  reference
  * no one is referring the first object
- * so whenever GC comes then it will destroy the first object [manish]
+ * so whenever GC comes then it will destroy the first object [vinay]
  * 
  * now for the second object how many references are available? - 2 [u1 and u3]
  * so one object is having two references, is it allowed - YES it is allowed 
  * 
  * how many references are available for third object? - 1 [u2]
  * 
- * so how many objects we can create for any objects? - N numbers of objects - it up to us 
+ * so how many references we can create for any objects? - N numbers of objects - it up to us 
  * one object can have multiple references [example - second object]
  * 
  * can we create object without any reference? - YES [example - first object does not have any reference ]
@@ -129,6 +129,7 @@ console.log(p2);
 //now we are updating the properties using second reference variable. so data will be updated or not? - YES because p2 is also referring to/pointing to the same object which is referred by p1
 p2.name = 'Dilip';
 p2.age = 40;
+p1.zip = 360490
 
 console.log(p1);
 console.log(p2);
@@ -136,7 +137,7 @@ console.log(p2);
 console.log('=======================');
 
 /**
- * never ever comment the object without references 
+ * never ever create the object without references 
  * even if you are create then that obejct will become eligible for GC 
  * 
  * below is the example of object without any reference 
@@ -208,14 +209,18 @@ let comp = {
     city: 'LA'
 };
 
-
+let userData = { ...info, ...address, ...comp };
+console.log(userData);
 /**
  * I have 3 objects and i want to clone all 3 objects into other object, so is it possible? -YES
  * check below example
  */
 
 let s1 ={
-    name: "tom"
+    name: "tom",
+    address: {
+            city:"Dubai"
+    }
 }
 
 let s2 ={
@@ -237,9 +242,4 @@ console.log(s4);
  * gererally we don't use ...spred / structuredClone concept in the automation 
  */
 
-let userData = { ...info, ...address, ...comp };
-console.log(userData);
 
-/**
- * 
- */
