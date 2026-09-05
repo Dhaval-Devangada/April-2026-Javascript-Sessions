@@ -7,9 +7,9 @@
 //and this fun is not giving me anything, it means there is no "return" keyword here
 //below fun say you are not giving me anything and i am not returning anything
 //so function is like a factory here -m factory says you give me something and i will give you something 
-//but there are other kind of factories as well where - factory says that you won't give me anything then I won't to give anything as well
-//we have not written "return" bec
-//a fun is called void fun is function is not returning anything
+//but there are other kind of factories as well where - factory says that you won't give me anything then I won't you give anything as well
+//we have not written "return" because function is not giving/returning us anything
+//a fun is called void fun - if a function is not returning anything
 //below fun is not returning anything so type of fun is void 
 function test(){
      console.log("hello test");
@@ -46,11 +46,11 @@ function getNumber() {
 }
 
 console.log(getNumber());
-//Above whatevr the getNumber() giving me we are consuming it by "console.log" and its not a good practice that console.log is consuming the value of the function
+//Above whatever the getNumber() giving me we are consuming it by "console.log" and its not a good practice that console.log is consuming the value of the function
 //whenevr we are calling "getNumber()" then its giving us something
 
 //we can call the function multiple times 
-getNumber(); // output of this functions is not consumed by anyone 
+getNumber(); // output of this function is not consumed by anyone 
 
 
 //we can store the value of the function in the variable means whatever the function is giving us, we are storing it in the variable/variable is consuming the value of fun
@@ -82,7 +82,7 @@ function launchBrowser(){
 let isLaunched=launchBrowser();
 console.log(isLaunched);
 
-//now on the basis of the "isLaunched" we can write further conditions or we can writr further logic byu using "isLaunched" variable
+//now on the basis of the "isLaunched" we can write further conditions or we can write further logic by using "isLaunched" variable
 
 if(isLaunched){
     console.log('enter the url: https://www.google.com');
@@ -92,7 +92,7 @@ else{
 }
 
 /**
- * fun is giving me somethig 
+ * fun is giving me something 
  * we are storing it in the variable 
  * and on the basis of that variable we are taking the decision 
  * that means we can use that variable for writing any kind of logic
@@ -128,14 +128,14 @@ console.log(typeof getTraninerName());//string
  * there is no concept of object here in function, because object has key-value pairs and here we are not storing any key-value pairs
  * fun always go inside the heap memory because they are non-primitive
  * 
- * isLaunched is primitive - because memory is fixed - so it will go inside the stack
+ * isLaunched[variable] is primitive - because memory is fixed - so it will go inside the stack
  * 
  * all the primitive will go inside the stack and non-primitive will go inside the heap
  */
 
 //3.some input param and some return:
 //add fun says give me two numbers 
-//how many parameters we are passin here: 2 
+//how many parameters we are passing here: 2 
 //input param: 2 ; return type: any [why "any" for that refer below things]
 //remember whenever we create a param the we don't write "let" or "var" before the param, we just write "x" and "y". if we write "let" or "var" then it will start giving me the error
 //try by uncommenting below
@@ -160,19 +160,19 @@ function add(x,y){  //type of both para[x and y] is any and return type is "any"
  * and function can return any type 
  * 
  * here we are returning the "z" 
- * but how can we cay that fun return type is number , because we really don't know that we are passing number or what
+ * but how can we say that fun return type is number , because we really don't know that we are passing number or what
  * so what is return type of the function right now? - return type of the function is "any"
  * we can pass anything , that's why type script will come into the picture 
  * 
- * this how js is designed that's why people don't like js as compared to typescript
+ * this is how js is designed that's why people don't like js as compared to typescript
  * 
- * what is out target? our target us please add two number and give it to us 
+ * what is out target? our target is to "please add two number and give it to us" 
  *
  * everything will be decided when we write the code or when we run the code?
  * in above fun we can pass anything  
  * x could be any 
  * y could be any 
- * result coukd be any 
+ * result could be any 
  * 
  * in js everything will be decided at run time 
  * so at run time x will become numnber
@@ -206,11 +206,11 @@ console.log(m3);//helloworld
  * don't you think that js is superflexiable here, because js will change it's behaviour at run time and it depends upon the type of parameter you are passing and what exactly that function is returning it
  * can we do the same thing in other language like c# and java - no
  * 
- * remember tha this not overloading, here we are just calling a fun 
+ * remember that this not overloading, here we are just calling a fun 
  * 
  * don't you thnink its weird
  * because we are writing logic for calculater 
- * bur here calculator is ready to accept anything sting, boolean ,number
+ * bur here calculator is ready to accept anything string, boolean ,number
  * user is able to pass anything in calculater
  * 
  * so this is the problem in the javascript
@@ -218,7 +218,7 @@ console.log(m3);//helloworld
  * so if parameter does not have any type then we can give anything
  * so to resolve above problem...type script will come into the picture
  * in typescript we have to give type of x and y then on the basis of that we will calculate the value of z and then we will return
- * that's why we call the language because "type" we need to define
+ * that's why we call the language "typescript" because "type" we need to define
  * 
  * here at run time type will be decided not at at the design time[while we write the code]
  */
@@ -239,11 +239,11 @@ let totalAmt = calculateBilling(1000, 500, 50);
 console.log(totalAmt);//1500
 
 /**
- * so what is the mistake
+ * so what is the mistake?
  * if you are creating a fun with n number of parameter, then it is mendetory/good practice to use those n number of parameter in your logic also
  * in above fun we have "tax" as para but we are not using it in the logic 
  * it not a good practice to use less number of para in your logic compare to the para we have declared in paranthesis
- * if you are not using specific para then remove that para from delcaratio
+ * if you are not using specific para then remove that para from delcaration
  * 
  * what if for some user tax is there but for some user no tax
  * then pass 0 
@@ -305,7 +305,7 @@ function calculateBilling(foodBill,drinksBilling,tax){
   * what kind of scenario/usecases i want to cover 
   * 
   * so write the requirement first of all
-  * so now its clear in myh mind that this is what product owner has written the req and now as a developer i have to write the code 
+  * so now its clear in my mind that this is what product owner has written the req and now as a developer i have to write the code 
   * 
   * Tomorrow if we are writing any complex to complex scenario
   * We have to write all the positive and negative scenarios/cases
@@ -324,7 +324,7 @@ function calculateBilling(foodBill,drinksBilling,tax){
         case 'chrome':
             console.log('chrome browser is launched successfully');
             return true;
-          //  break; // here if we have used 'return' then it will never break /come to "break" part. so in any programming language we should never write 'return and break' together
+          //  break; // here if we have used 'return' then it will never break come to "break" part. so in any programming language we should never write 'return and break' together
                   // because here 'retun' will behvae like a 'break' for us 
                   //but if we remove the 'return' and just keep the 'break' then it won't 'return' anything so just remove the 'break'
                   //return should be the last statement
@@ -341,7 +341,7 @@ function calculateBilling(foodBill,drinksBilling,tax){
             return true;
           //  break;
     
-        default:  //negative case and above all are positive cases
+        default:  //below is negative case and above all are positive cases
             console.log('invalid browser...', browserName);
             console.log('please pass valid browser name: chrome,firefox,edge,safari');
             return false;
@@ -349,10 +349,10 @@ function calculateBilling(foodBill,drinksBilling,tax){
     }
  }
  /**
-  * so whatever the requirment we have written before writing the fun has helping us a lot do decide the logic and to write the logic 
+  * so whatever the requirment we have written before writing the fun has helping us a lot o decide the logic and to write the logic 
   * so any big problem you are solving or writing the logic for that then first you write it 
   * most of things will be cleared when you write it step by step in the documentation
-  * documentation meand all the bullets points or important points
+  * documentation means all the bullets points or important points
   * then start writing the code 
   */
 
@@ -367,11 +367,11 @@ if(isBrowserLaunched){
 //try with CHROME/chROME- js is case sensitive - so here user can supply small/capital chrome as well - so probelm is with our code. 
 //what if user passes > CHr ome > then its a problem with user or code - its a problem with user
 //what if user passes >'   chrome    ' > then its a problem with user or code - its a problem with code - according to user we are passing 'chrome'
-//what if user passes > Chome > then its a problem with user or code - its a problem with user - because user is passing it delibaterly
+//what if user passes > Chome > then its a problem with user or code - its a problem with user - because user is passing wrong name delibaterly
 /**
  * small small console.log('.....') lines will help us to debug the code 
  * it tells us that what is happning at the run time.
- * if we don't write console.log('.....') then user is not aware that what is happning internally. user is confused
+ * if we don't write console.log('.....') then user is not aware that what is happning internally. user is confused.
  */
 
 
@@ -404,7 +404,7 @@ printing()
 /**
  * but if in the package.json you change the type from "module" to "commnjs" then error will not come 
  * and latest function will be executed 
- * means always take the latest verisonof the function
+ * means always take the latest verison of the function
  */
 
 console.log('===========================');
@@ -451,8 +451,12 @@ printing("dhaval")
 /**
  * Don't write "function" inside the  console.log - it will give you undefined
  */
-let myNumber = console.log(getNumber());
-console.log(myNumber);
+function getNumber() {
+    console.log('getting some number');
+    return 100; // this function is returning 100 and 100 is a number 
+}
+let myNumber = console.log(getNumber()); //this will print 100 
+console.log(myNumber);//undefine 
 
 /**
  * There are two thing in js
