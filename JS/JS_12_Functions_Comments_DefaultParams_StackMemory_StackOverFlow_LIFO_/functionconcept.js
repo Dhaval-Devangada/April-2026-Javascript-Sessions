@@ -5,7 +5,7 @@
  * how exactly we will come know the type of x and type of y?
  * as of now type of x and y is any 
  * so if we pass any string the "addition" fun will start concatinating 
- * but above is not the problem. it how the js works. 
+ * but above is not the problem. its how the js works. 
  */
 
 /**
@@ -46,7 +46,7 @@ console.log(m3);
  * 
  * so to provide the documentation follow below steps
  * click above the func 
- * write "/***" then click on "Enter"
+ * write "/**" then click on "Enter"
  * then we will be able to see comment section of that respective func 
  */
 
@@ -73,7 +73,7 @@ console.log(t2);
  * Documentation/comment above the fun will not solve the problem 
  * it will help the user. it is just to showcase and give the instruction to the user 
  * 
- * after the reading the suggestions, if we pass the wrong argument then that it's over problem 
+ * after the reading the suggestions, if we pass the wrong argument then it's our problem 
  */
 
 
@@ -189,7 +189,7 @@ console.log('=================================');
  * 
  * so we should not write the code like this in the prod 
  * we have seen in laptop that there is big window is there and inside that we have multiple windows > inside that we have multiple windows > then we need to kill from taskmanager
- * that ia what infinite calling > back to back pop-ups are coming > so we have to go to task manager and delete the entire task
+ * that is what infinite calling > back to back pop-ups are coming > so we have to go to task manager and delete the entire task
  * exactly same problem is here
  * 
  * URL for stack memory allocation  and de-allocation animation
@@ -217,7 +217,7 @@ m1();
 
 
 
-//below is the example of recursion // for below fun will get stack oveflow error as well  or below will create the infinite stacks inside the stack 
+//below is the example of recursion // for below fun will get stack oveflow error as well or below will create the infinite stacks inside the stack 
 //a function is calling itself: recursive function: recursion
 // function login() {
 //     console.log('login to app');
@@ -229,7 +229,7 @@ m1();
 
 /**
  * because of stackoverflow error we ignore the recursive fun 
- * changces are high of getting "stack overflow" error due to recursive fun 
+ * chances are high of getting "stack overflow" error due to recursive fun 
  * so always avoid resurcive way for solving the problem 
  * recursive we write in such a way that , we can come out of the loop 
  */
@@ -244,7 +244,7 @@ m1();
  * stack memory is always - simple allocation and de-allocation
  * heap memory is more complex - first of it will create the object - GC will need to continous monitor heap memory - GC will keep checking whcih object has no reference/null reference
  * 
- * when heap overflow happens then GC will take of it 
+ * when heap overflow happens then GC will take care of it 
  * to control the stack overflow, programmer need to write good code/ correct sequance of the code 
  */
 

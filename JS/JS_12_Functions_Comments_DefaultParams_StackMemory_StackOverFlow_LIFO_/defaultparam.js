@@ -79,22 +79,42 @@ function add (a, b=10){
 let t1 = add(5);
 console.log('t1=' + t1);
 
+console.log("-------------------------------");
+
 //undefine will also trigger the default //this is predefine / rule in the javascript
+function add (a, b=10){
+    console.log('value of a = '+ a);
+    console.log('value of b = '+ b);
+    return a + b ;
+}
 let t2 = add(5,undefined) 
 console.log('t2=' + t2);//15
+
+console.log("-------------------------------");
 
 //null will not trigger the default
 //null mesans nulify 
 //nulify the 'b' or second parameter, so "b" parameter is gone
 //'b' does not exist, because we are pointing to 'null' now
+function add (a, b=10){
+    console.log('value of a = '+ a);
+    console.log('value of b = '+ b);
+    return a + b ;
+}
 let t3 = add(5,null)
 console.log('t3=' + t3);//5
 
 
 console.log('------------------');
-// NaN want to trigger anyt=thing 
+
+// NaN won't to trigger anything 
+function add (a, b=10){
+    console.log('value of a = '+ a);
+    console.log('value of b = '+ b);
+    return a + b ;
+}
 let t4 = add(5,NaN);
-console.log('t4= ',t4);
+console.log('t4= ',t4);//NaN
 
 console.log('----------------------------');
 //we can pass the 'default param' first as well but always write the "default param" at the last, thats the sequance we need to follow 
@@ -104,7 +124,7 @@ console.log(firstName,lastName);
 }
 
 //here our default param is first param 
-//here we are not passing the lastNmae so it will print "naveen undefined"
+//here we are not passing the lastName so it will print "naveen undefined"
 printFullName('naveen') //naveen undefined
 
 //above we are not printing the lastName and we have kept the first param as an 'default param' which is the wrong way of writing the default param
