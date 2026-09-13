@@ -35,7 +35,7 @@ console.log('------------------------------------------');
 
 //call by reference 
 //call by reference means 'object reference'
-//can we supply object reference to an fun as an argument ? - YES 
+//can we supply object reference to a fun as an argument ? - YES 
 
 //call by reference: Object reference
 //below we have one object and it has properties 
@@ -80,7 +80,7 @@ console.log(user.name);//Peter // here we are printing the name after calling th
 
 //destructuring concept:
 //destructuring concept in only used in JS and not in the other languages 
-//destructuring concept is heavely used in Playwright, infect the first line of code you when you write for PW there, destructuring concept is mentioned over there
+//destructuring concept is heavely used in Playwright, infect the first line of code, when you write in PW then, destructuring concept is mentioned/used over there
 /**
  * what do you mean by "destructuring"?
  * destructuring means you have to fetch the partial value 
@@ -101,13 +101,13 @@ let person = {
 /**
  * Below we have "getPersonData" fun 
  * But "getPersonData" fun say I don't want all the information about the person 
- * In above "persion" object, we have "4 key-value pairs"
+ * In above "person" object, we have "4 key-value pairs"
  * 
 
  * Above in the "getUserDetails" fun we have passesd "user" which will pass whole object data/details to fun, then from that whole object details, we will decide from that what data we want to use 
  * that we want to use, "name"/ "age"/ i want to use everything 
  * 
- * says that you give me the whole object but from that whole object i will take only two things, name,age and salary
+ * says that you give me the whole object but from that whole object i will take only three things, name,age and salary
  */
 function getPersonData({ name, age, salary }) { //here we need to pass the data in {} braces , what data? the specific data we need from the whole object. We don't need to supply person.name/age/salary. we just need to mentioned keys 
     console.log(name, age, salary);  //here we are passing the whole data to "getPersonData" but the fun says that i want to destructure with the "name,age and salary only"
@@ -137,9 +137,14 @@ getPersonData(person);//here we are supplying the whole object // this is again 
  * order dosen't matter here "getPersonData({ name, age, salary })" /getPersonData({ age, name, salary })
  * 
  * whole object will be passed to fun but out of whole object, whatever the properties fun required, those property will be consumed by that fun
- * suppose for below example, we are passing 4 but out of 4 properties only 1 property will be taking by "getData" fun and that fun will print that property on the consol
+ * suppose for below example, we are passing 4, but out of 4 properties only 1 property will be taking by "getData" fun and that fun will print that property on the console
  */
-
+let person = {
+    name: 'Tom',
+    age: 30,
+    salary: 12.33,
+    isActive: true
+}
 //another example
 function getData({ name }) {
     console.log(name);
@@ -156,7 +161,7 @@ getData(person);
  * parfameter name should be same as key name, we can not write random thing here
  * 
  * in PW it's up to us that what we want to destcture -
- * PAGE, BROWSER , REQUEST OF THE API CALL - it's up to us that what we want to destcturek
+ * PAGE, BROWSER , REQUEST OF THE API CALL - it's up to us that what we want to destcture
  */
 
 
@@ -196,21 +201,21 @@ let person = {
 let { name: username, age: userage } = person;
 console.log(username, userage);
 //here we can say that we are destructuring with the 2 properties
-//above we not using the keys given in the object,instead of that we have used our own name/custom name,for that we have created two more variable name->userage and username
+//above, we are not using the keys given in the object,instead of that we have used our own name/custom name,for that we have created two more variable name->userage and username
 //but we can not use those variable name/custom name directly, we need to create our own variable name/custome name then we to do mapping with the right key and with the available key in the object
 
 /**
  * so which one is batter? 
  * To use the keys directly or to create the variable/custom name
- * Why should we write more code 
- * Why to do unnecessary mapping and all 
- * Why to write above unnecessary code 
+ * Why should we write more code? 
+ * Why to do unnecessary mapping and all?
+ * Why to write above unnecessary code? 
  * 
  * so TO USE KEYS DIRECTLY IS BATTER OPTION, to avoid any confusion
  */
 
 
-//what is we don't destructure any property?
+//what if we don't destructure any property?
 let person = {
     name: 'Tom',
     age: 30,

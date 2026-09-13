@@ -11,7 +11,7 @@
  * 
  * This is also a kind of anonymous function : no name of the function
  * 
- * so how to create the anonymou fun with the IIFE concept 
+ * so how to create the anonymous fun with the IIFE concept 
  * this function will be invoked(called) by itself
  * 
  * how to do it : refer below
@@ -75,7 +75,7 @@
 /**  We can create the IIFE fun with the paramenter as well*/
 (function (username){ 
     console.log('Created IIFE fun without => symbole and with parameter', username);
-})('Dhaval');
+})('Komal');
 
 /**
  * This methods behaves like main method 
@@ -98,16 +98,16 @@
 ('Dhaval',23); 
 
 //So this is called the 'anonymous IIFE function'
-//we can create these function anywhere anyytime. there is no restriction
+//we can create these function anywhere anytime. there is no restriction
 //IIFE fun can not be hoisted because it does not have any name
 //We need to write the "function" keyword inside () while creating the IIFE fun. If you don't want to write "function" keyword then you need to use "=>" function 
 
-/** so what is the advantage of IIFE 
+/** so what is the advantage of IIFE?
  * 
  * If I have an requirement that before my "test execution" or before anything
  * this IIFE fun, i don't need to call it explicitely, no one is calling this fun
  * this fun is automatically calling by itself
- * so any pre-condition, pre-requiest i want to write [like load testdata/read from excel/make db connection] then we can write those in this IIFE function
+ * so any pre-condition, pre-requieste i want to write [like load testdata/read from excel/make db connection] then we can write those in this IIFE function
  * 
  *
  * 
@@ -131,7 +131,7 @@
  * you can not understand "arrow function" without "anonynmous"
  * 
  * so in js we have n number of type of functions ans each having its own usecase 
- * once you understnad all of them together then you will know that where to use what and their usecase
+ * once you understnad all of them together then you will know that "where to use what" and their usecase
  * 
  */
 
@@ -139,11 +139,11 @@
  * we can return the values from IIFE fun as well
  */
 
-let result = (function(x,y){// here "result" is not expression its a variable. Here we have already called the function after creating it. SO why we need "expression name"?. we use "expression name" when we we have big fun name / when we want to call the fun using short name/expression name  
+let result = (function(x,y){// here "result" is not expression its a variable. Here we have already called the function after creating it. So why we need "expression name"?. we use "expression name" when we we have big fun name / when we want to call the fun using short name/expression name  
     return x + y;
 })(6,9);
 console.log(result);
-
+result() //TypeError: result is not a function
 //all the IIFE fun will be going to the heap memory 
 
 /**
@@ -177,7 +177,7 @@ console.log(result);
  * 2nd fun will go inside stack - memory will be occupied - function executed - function will be deallocated
  * 3rd fun will go inside stack - memory will be occupied - function executed - function will be deallocated
  * 
- * here we don't have work flow like ecommese, so deallocation will happedn once the individual func is executed
+ * here we don't have work flow like ecommrce, so deallocation will happedn once the individual func is executed
  * refre - 6-call-stack-memory-allocation-for-individual-func.png
  * 
  * but generally we have workflow so we keep creating stack and once done then we deallocate and back to 0 memory 
@@ -190,3 +190,11 @@ console.log(result);
  * so in IIFE we are creating only 1 annonynous fun not 2 
  * 
  */
+//Below are the two ways of writing IIFE function
+(()=>{
+
+})();
+
+(function(){
+
+})();

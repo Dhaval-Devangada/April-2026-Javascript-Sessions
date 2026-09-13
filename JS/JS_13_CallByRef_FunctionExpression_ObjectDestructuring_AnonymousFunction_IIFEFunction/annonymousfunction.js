@@ -58,8 +58,8 @@ test();
  * Here we are using the "function expression" with the "annonymous function"
  */
 
-let add = function (x, y){
-   return x + y ;
+let add = function (x, y){ //with parameters
+   return x + y ; //returning 
 }
 
 let r1 = add(100,200);
@@ -124,7 +124,7 @@ console.log(flag);
  * in arrow function, we will replace the "function" keyword with "=>"
  * then we will see the concept of the arrow fun and 
  * then we will see concept of MAP, REDUCE and ASYNC programming and other things
- * lasted way of creating the "anonymous fun" is by using the "arrow" fun
+ * latest way of creating the "anonymous fun" is by using the "arrow" fun
  */
 
 /**
