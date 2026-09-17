@@ -1,9 +1,9 @@
 /**
  * program - 1
  */
-let products = ['macbook pro', 'imac', 'iphone 17', 'canon', 'macbook air'];//0-4: 5 [total values are 4] and length is 5
+let products = ['macbook pro', 'imac', 'iphone 17', 'canon', 'macbook air'];//0-4: 5 [total index 0-4 and values are 5] so length is 5
 
-console.log(products);//we can directly print it here
+console.log(products);//we can directly print the array here in js
 
 //1. index based loop:
 for (let i = 0; i <= products.length - 1; i++) {
@@ -22,13 +22,14 @@ found the product
  */
 
 /**
- * Same above thing we will follow in th playwright. Like in the country dropdown 
+ * Same above thing we will follow in the playwright. Like in the country dropdown 
  * The moment we see our spaecific country select it then break the loop
  * 
  * same thing we can follow for the footer > go and check footer link one by one. the moment we have privacy policy we click on it and break the loop
  */
-let products = ['macbook pro', 'imac', 'iphone 17', 'canon', 'macbook air'];
+
 console.log('-----------');
+let products = ['macbook pro', 'imac', 'iphone 17', 'canon', 'macbook air'];
 //Advanced loop
 //2. for .. of loop:
 
@@ -44,6 +45,7 @@ for (let e of products) {
  */
 console.log('-----------');
 
+let products = ['macbook pro', 'imac', 'iphone 17', 'canon', 'macbook air'];
 //Reverse order: By using normal for loop
 for (let i = products.length - 1; i >= 0; i--) {
     console.log(products[i]);
@@ -52,7 +54,7 @@ for (let i = products.length - 1; i >= 0; i--) {
 console.log('-----------');
 //using for ... of loop:
 /**
- * "for of" loop always go in forward direction - that's the draw bac, we can go in reverse direction. We can do it by using some heck or using third variable - but by default the nature tof the for loop is always go in forward direction
+ * "for of" loop always go in forward direction - that's the draw back, we can go in reverse direction. We can do it by using some heck or using third variable - but by default the nature the of the for loop is always go in forward direction
  */
 
 
@@ -91,7 +93,9 @@ empData[-2] =200;
 for (let e of empData) {
     console.log(e);
 }
-//try to execute above program - property[-1, -2] will not be printed [if we use the for..of lopp - means if we try to iterate the values using for loop then properties will not be printed because those not values ]
+
+console.log(empData);
+//try to execute above program - property[-1, -2] will not be printed [if we use the for..of loop - means if we try to iterate the values using for loop then properties will not be printed because those are not values ]
 //but if we directly print the array then properties will be displayed
 console.log('------------');
 

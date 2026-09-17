@@ -46,7 +46,7 @@
 //two Dim: 2D array:
 /**
  * how to create 2D-array
- * write let num[]; then go inside the [] thne press enter 
+ * write let num[]; then go inside the [] then press enter 
  * then start creating raws
  */
 let num = [
@@ -67,7 +67,7 @@ let num = [
 console.log(num[0][0]); //what is the value available on 00  -//1
 console.log(num[0][3]);//first raw - third column - //4
 console.log(num[2][3]);//second raw and third column - //400
-console.log(num[3][3]); //third raw and third column - third raw is not available so it gives the error 
+//console.log(num[3][3]); //third raw and third column - third raw is not available so it gives the error  //TypeError: Cannot read properties of undefined (reading '3')
 
 /**
  * length of the array 
@@ -76,7 +76,7 @@ console.log(num[3][3]); //third raw and third column - third raw is not availabl
  * row count or column count? - row count
  */
 console.log(num.length);//row count=3
-console.log(num); // we can print whole D-array as well
+console.log(num); // we can print whole 2D-array as well
 console.log("-------------------");
 //how to print/iterate the 2D array: by using the for loop
 
@@ -103,7 +103,7 @@ let num = [
  */
 /**
  * How to iterate column?
- * We already have for loop for outer loop - or for rows - for vertical iteration
+ * We already have for loop - for rows which is outer loop - for vertical iteration
  * for (let i = 0; i <= num.length - 1; i++) { // "i" is representating the row - i means top to bottom, for condition we need total row count so "i <= num.length - 1;". start from 0 and go upto second row
 
     below is for the columns - for horizantal iteration
