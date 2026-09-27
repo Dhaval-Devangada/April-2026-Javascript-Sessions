@@ -4,9 +4,9 @@
 //Total 8 methods we have seen in 15th session
 //9.includes : particular item or element is really available or not
 
-let num = [1,2,3,4,5];
-console.log(num.includes(3));//true
-console.log(num.includes(10));//false
+let num2 = [1,2,3,4,5];
+console.log(num2.includes(3));//true
+console.log(num2.includes(10));//false
 
 /**
  * includes(searchElement: number, fromIndex?: number): boolean
@@ -16,8 +16,8 @@ console.log(num.includes(10));//false
 //join all the elements in the array
 //Adds all the elements of an array into a string, separated by the specified separator string.
 
-let arr = ['Naveen','Automation','Labs'];
-let newArr = arr.join('|');//how exactly you want to join - I want to join with '|'[pipe sign]
+let arr1 = ['Naveen','Automation','Labs'];
+let newArr = arr1.join('|');//how exactly you want to join - I want to join with '|'[pipe sign]
 console.log(newArr);//Naveen|Automation|Labs
 //we can use any sign/space/word
 
@@ -27,37 +27,37 @@ let arr = ['Naveen','Automation','Labs'];
 console.log(arr.toString());//Naveen,Automation,Labs
 console.log(object);//representation in square bracket / exactly whatever is ther it will give you
 //above method will be used just for the logging purpose
-//it takers only comma by default. we can not change it. but if you want diff seprator then you can use "join" method
+//it takes only comma by default. we can not change it. but if you want diff seprator then you can use "join" method
 
 //12. at : at method will will give you "element at a given index..it supports negative index also"
-let num = [1,2,3,4,5];
-console.log(num.at(0));//1
-console.log(num.at(-1));//5
-console.log(num.at[-1]);//undefine
+let num1 = [1,2,3,4,5];
+console.log(num1.at(0));//1
+console.log(num1.at(-1));//5
+console.log(num1.at[-1]);//undefine
 //square bracket dosen't support negative index
 
 //13. forEach method: 
 //in the js forEach is not a loop, its a method
 //it a method available on the array direclty
 
-let cart  = ['imac','samsung','iphone','imac','macbook','keyboard','tom'];
+let cart1  = ['imac','samsung','iphone','imac','macbook','keyboard','tom'];
 //to iterate the elements we can use "for..of" and "for..in" loop
 //we can also use the "forEach" method
 //forEach loop accept the "arrow fun"
 //so inside the 
-cart.forEach((e)=>{ //"e" will go to each and every element in the array
+cart1.forEach((e)=>{ //"e" will go to each and every element in the array
     console.log(e);
 })
 
 //"e" go to each and every element and convert it into uppercase
-let cart  = ['imac','samsung','iphone','imac','macbook','keyboard','tom'];
-cart.forEach((e)=>{ //"e" will go to each and every element in the array
+let cart2  = ['imac','samsung','iphone','imac','macbook','keyboard','tom'];
+cart2.forEach((e)=>{ //"e" will go to each and every element in the array
     console.log(e.toUpperCase());
 })
 
 
-let num = [1,2,3,4,5];
-num.forEach((e)=> console.log(e*2));// if you have one line of code after the arrow then we can avoid {} and write it like this
+let num3 = [1,2,3,4,5];
+num3.forEach((e)=> console.log(e*2));// if you have one line of code after the arrow then we can avoid {} and write it like this
 
 //forEach is working like an loop but its not. forEach is a method
 //only arrow functions are supported inside the forEach loop
@@ -67,8 +67,8 @@ num.forEach((e)=> console.log(e*2));// if you have one line of code after the ar
 /**
  * in below code how many functions do we have?
  */
-let cart  = ['imac','samsung','iphone','imac','macbook','keyboard','tom'];
-cart.forEach((e)=>{ //"e" will go to each and every element in the array
+let cart3  = ['imac','samsung','iphone','imac','macbook','keyboard','tom'];
+cart3.forEach((e)=>{ //"e" will go to each and every element in the array
     console.log(e.toUpperCase());
 })
 /**
