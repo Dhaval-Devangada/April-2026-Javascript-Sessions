@@ -4,7 +4,7 @@
  * Once we know the arrow fun then we will be able to understand the "callback" and "async await" function as well 
  * 
  * In arrow function certain rules we need to follow
- * the moment we see the code we should be ablte to recognize that given fun is arrow fun or not and how exactly it is getting called 
+ * the moment we see the code we should be able to recognize that given fun is arrow fun or not and how exactly it is getting called 
  */
 
 /**
@@ -13,9 +13,9 @@
  * arrow function is anonymous function
  * means this function has no name
  * this function is denoted by "()=>"
- * this function has no "function" key word as well
+ * this function has no "function" keyword as well
  * this function is heavely used in "callback function"
- * later on we will see when to use anonymous fun with arrow fun and when not to use
+ * later on we will see, when to use anonymous fun with arrow fun and when not to use
  */
 
 //()=> - where exaxtly the arrow sign, arrow sign is always towards the right hand side , then after we can write whatever we want to write/do
@@ -54,17 +54,17 @@ test();
 
 /**
  * Remember that in both the cases,
- * whether you are creating anonymous fun with the "function" name
+ * whether you are creating anonymous fun with the "function" keyword
  * or without "function" keyword , with the "=>" sign, then we need to store both the function in the variable 
- * then we need to call [anonymous fun,arrow fun] by using the variabl, that is the mendetory thing  
+ * then we need to call [anonymous fun,arrow fun] by using the variable[expression name], that is the mendetory thing  
  */
 
 /**
  * When to write the {} in the arrow fun and when not to write?
  * we need to check that how many lines are there in the body of arrow function? > if you have 1 line then you can ignore the curly braces other wise you must need to write curly braces {}
- * if you are not confortable with not writing the curly braces then you can write the curly braces with the 1 line as well
+ * if you are not cofortable with not writing the curly braces then you can write the curly braces with the 1 line as well
  */
-let pop = ()=>{
+let withinCurly = ()=>{
     console.log('hello dhaval');
 }
 withinCurly();
@@ -89,7 +89,7 @@ withinCurly();
 /**
  * So basically there are two ways to create anonymous fun 
  * 1. One with the "=>"
- * 2. One with without arrow but with the help of function
+ * 2. One with without arrow but with the help of function keyword
  * 
  * arrow fun is the morden way of creating the anonymous func
  * in PW also we generally don't use the "function" keyword, we always go with the "arrow function" now
@@ -112,14 +112,14 @@ printInfo('Naveen');//calling the fun by passing the value - call by value
  * so where exactly arrow sign is pointing left/right? -> right side
  */
 //we can perform any operation in the body part
-let printInfo = (name) => console.log(name + 'automation');
-printInfo('Naveen');
+let printInfo1 = (name) => console.log(name + 'automation');
+printInfo1('Naveen');
 
 //zero param
 //param: 0
 let info = () => console.log('hello world');
 info(); //how to call - by using expression name
-//above we don't need to pass any argument/value because arrow fun is not talking anything
+//above we don't need to pass any argument/value because arrow fun is not taking anything
 
 //1 parm:
 //param: 1 - no need to use ()
@@ -135,16 +135,16 @@ printUser('DhavalAutomation')
 
 //param: 1 
 //param: elements
-let clickElement = element =>{//multiple lines of code we want to write so writing {} curly braces // we have only one parameter "element" so not using ()
+let clickElement = element =>{//multiple lines of code we want to write, so writing {} curly braces // we have only one parameter "element" so we are not using ()
     console.log('check the ', element , 'is visible');
-    console.log('clicl on the ', element);
+    console.log('click on the ', element);
     console.log('close the browser');
 }
 clickElement('loginButton')
 //we are not returing anything from above fun so there is no return 
 
 //add two numbers:
-//give me 2 paerameteres
+//give me 2 parameteres
 //return x + y 
 //if you have more than 1 parameter then now it is mendetory to use the paranthesis
 let add =(x,y) => x + y; //resultant will be given to "add"
@@ -167,10 +167,10 @@ let addition = (x , y) =>{
  * so if we are writing more then 1 line then it is mendetory to write the "return" keyword
  */
 let r1 = addition(200,300);
-console.log('r1');
+console.log(r1);
 
 /**
- * if we want to use "retuen" with 1 line of code, then we can do it - but in that case we need to use curly braces 
+ * if we want to use "return" with 1 line of code, then we can do it - but in that case we need to use curly braces 
  * check below example  
  */
 let result1 = (x,y) =>{
@@ -194,16 +194,22 @@ console.log(r3);
  * we want to return some locator 
  * 
  */
-let findElement = (id) => "//div[@id='" + id + "']";
+let myString = "//div[@id='logo']"
+console.log(myString);
+
+let findElement = (id) => "//div[@id='" + id +"']";
+let result2 = findElement('komal');
+console.log(result2);
 // above we have written method to find the xpath using "id" - here we haved used normal
 //You must close the string quotes, add the variable, and open the quotes again to handle the single quotes required by XPath.
 
+
 //we can write the varibale "id" by using the bcktick as well 
-let findElement = (id) => `//div[@id='${id}']`; // here if we want to remove () then we can remove it because we have only 1 param
+let findElement1 = (id) => `//div[@id='${id}']`; // here if we want to remove () then we can remove it because we have only 1 param
 //above we don't need to write the "return" keyword - no 
 //call the above method and supply the "id"
 //so above method will return the xpath
-let xpath = findElement('neveenOpenCart')
+let xpath = findElement1('neveenOpenCart')
 console.log(xpath);
 //so above we are saying that, find the element , and id of the element is "neveenOpenCart" => then you create some string / forget about xpath , the exactly same string you give it back to xpath 
 
@@ -267,15 +273,15 @@ console.log(t2);
 
 //so remember whenever we create arrow fun, we need to remember/think about below
 //how many param are there single or multiple
-//do we need write curly braces or not 
-//do we need to write "return" key word or not 
-//do we have single line or multiple lines of code
+//do we need write curly braces or not?
+//do we need to write "return" key word or not?
+//do we have single line or multiple lines of code?
 
 /**
  * Give a string and convert it to lowsercase 
  */
 
-let convertToLowerCase = string => string.toLowerCase(); //we don't have used braces so we don't need to write "retun" keyword //convertToLowerCase is function expression name
+let convertToLowerCase = string => string.toLowerCase(); //we don't need to use curly braces because we have only 1 line.so we don't need to write "retun" keyword //convertToLowerCase is function expression name
 let u1 = convertToLowerCase("NAVEEN AUTOMATION LABS")
 console.log(u1);
 
@@ -290,8 +296,9 @@ console.log(empNames.length);
 console.log(empNames);
 }
 
-printEmpList('Dhaval','Ram','Vijay')//all these 4 values will be given to "empNames"
-//...spread parameter can be used as a parameter also to supply multiple values
+printEmpList('Dhaval','Ram','Vijay')//all these 3 values will be given to "empNames"
+printEmpList(1,2,3)
+//...spread parameter can be used as a parameter - to supply multiple values
 
 /**
  * Can i supply objects to the arrow function?
@@ -326,5 +333,5 @@ let printInfoWithDestructuring = ({name,salary})=>{
     console.log(name,salary);
 }
 printInfoWithDestructuring(user)//we are passing the whole object and taking/printing only two values 
-//note: if you are using the destructuring then always uswe the paranthesis with the curly braces
+//note: if you are using the destructuring then always use the paranthesis with the curly braces
 

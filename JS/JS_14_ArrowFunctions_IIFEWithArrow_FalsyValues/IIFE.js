@@ -18,19 +18,19 @@ let flag = (()=>{
 })();
 console.log(flag);//true
 // don't get confused, "flag" is not the function expression name. "flag" has the return value of the entire function
-//because IIFE has no name. It's a pure anonymous function. It ha no name. No expression name - nothing 
+//because IIFE has no name. It's a pure anonymous function. It has no name. No expression name - nothing 
 //if you want to return then store it in the variable then print it on the console
 
 
 
 /**  Now can we supply the parameter also in the IIFE - YES */
 //One IIFE function with one "arrow =>" function, with 1 parameter and return 
-let flag = ((browserName)=>{
+let flag1 = ((browserName)=>{
     console.log('hello world', browserName);
     console.log('byee');
     return true; //If IIFE is returning true then we need to store it in the variable
 })('chrome');
-console.log(flag);
+console.log(flag1);
 
 /**
  * where exactly the IIFE function will be stored?

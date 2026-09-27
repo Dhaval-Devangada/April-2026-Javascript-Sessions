@@ -65,13 +65,13 @@ if (-1) {
 
 /**
  * so below all are falsy values 
- * 1,-1,0,-0 
+ * 0,-0 
  */
 
 /**
  * Now if we write "0n" then it's what?
  * "0n" is a big integer number , but ultimately its what - it's 0 - zero means false
- * so output foe below will be "bye"
+ * so output for below will be "bye"
  */
 if (0n) { 
     console.log('hi');
@@ -179,9 +179,9 @@ if (NaN) {
 
 //falsy values
 //true: 1
-//false,0,-0,0n,"",null,undefined, NaN
+//false: false,0,-0,0n,"",null,undefined, NaN
 //so above 8 are the falsy values, other than that everything will be considered as true. it dosen't matter positive/negative
-//only applicacable in the context of if-else 
+//only applicacable in the context of if-else,while, or the ternary operator.
 
 /** so what if we write blank array 
  * [] - blank array is internally considered as - [] ==> " " [string with space ] ==> one space is available so it will be considered as true
@@ -216,14 +216,14 @@ if ("Komal") {
 
 //falsy values
 //true: 1
-//false,0,-0,0n,"",null,undefined, NaN
+//false: false,0,-0,0n,"",null,undefined, NaN
 //so above 8 are the falsy values, other than that everything will be considered as true. it dosen't matter positive/negative
-//only applicacable in the context of if-else 
+//only applicacable in the context of if-else,while, or the ternary operator.
 
 //if we write below then it won't be considered as false/true
 console.log(0);
 
-//if you are trying to write the code with if-else then only falsy value will be considered 
+//if you are trying to write the code with if-else/boolean condition then only falsy value will be considered 
 
 //below is comparing values and not the false values
 console.log(0 === 0);
@@ -260,17 +260,17 @@ printUserInfo(user);  //tom 12.33 chrome
 
 //now lets comment the "salary" which we have in object
 
-let user = {
+let user1 = {
     name:'tom',
     age:30,
  //   salary:12.33,
     isactive: true
 };
 
-let printUserInfo = ({name,salary=34.44},browser="chrome")=>{
+let printUserInfo1 = ({name,salary=34.44},browser="chrome")=>{
     console.log(name,salary,browser);
 }
-printUserInfo(user);  //tom 34.44 chrome
+printUserInfo1(user1);  //tom 34.44 chrome
 
 
 //if we are doing object destructuring with one param then we must need to use () paranthesis. because here we are not passing parameter 
@@ -282,8 +282,26 @@ printUserInfo(user);  //tom 34.44 chrome
  //above "name" is not a normal variable
 
 //below is correct way writing the code  - with objecet destructuring with 1 key 
-let printUserInfo = ({name})=>{
+let printUserInfo2 = ({name})=>{
     console.log(name,salary,browser);
 }
 
 //for the normal variable we can remove the () but for the object key/keys we need to add the paranthesis
+
+
+
+
+
+/**
+ * | Falsy Value | Meaning         |
+| ----------- | ------------------ |
+| `false`     | Boolean false      |
+| `0`         | Positive zero      |
+| `-0`        | Negative zero      |
+| `0n`        | BigInt zero        |
+| `""`        | Empty string       |
+| `null`      | Absence of a value |
+| `undefined` | Value not assigned |
+| `NaN`       | Not a Number       |
+
+ */
